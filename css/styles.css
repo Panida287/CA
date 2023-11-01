@@ -275,6 +275,9 @@ body {
         display: grid;
         height: 100%;
         grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-areas:
+        '1 2 3 4 5';
+        overflow: hidden;
     }
 
     .movie-poster {
@@ -285,7 +288,7 @@ body {
         overflow: hidden;
     }
 
-    .carousel div {
+    .carousel a {
         display: grid;
         grid-template-rows: 1fr;
         overflow: visible;
@@ -299,24 +302,32 @@ body {
         position: relative;
         left: -85px;
         top: 60px;
+        height: 100%;
+        width: 90%;
     }
 
     #addams {
         grid-area: 2;
         position: relative;
         top: 20px;
+        height: 100%;
+        width: 90%;
     }
 
     #barbie {
         grid-area: 3;
         border: 1px solid white;
         box-shadow: 0 0 10px aqua;
+        height: 100%;
+        width: 90%;
     }
 
     #batman {
         grid-area: 4;
         position: relative;
         top: 20px;
+        height: 100%;
+        width: 90%;
     }
 
     #fast {
@@ -324,13 +335,14 @@ body {
         position: relative;
         left: 83px;
         top: 60px;
+        height: 100%;
+        width: 90%;
     }
 
     .filmmaker-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 80px;
         margin-bottom: 40px;
     }
 
@@ -342,6 +354,209 @@ body {
 
     .filmmaker-header h2 {
         font-size: 2rem;
+    }
+
+    .directors {
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 100px 20px 120px;
+        grid-template-areas:
+        'daniel         karol          katie'
+        'article-1      article-2      article-3'
+        'read1          read2          read31'
+        'see-more       see-more       see-more'
+    }
+
+    #daniel {
+        grid-area: daniel;
+        background-image: url("assets/images/actors-directors/filmmaker1.png");
+        background-clip: padding-box;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 8px 8px 8px;
+
+    }
+
+    #karol {
+        grid-area: karol;
+        background-image: url("assets/images/actors-directors/filmmaker2.png");
+        background-clip: padding-box;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 8px 8px 8px;
+    }
+
+    #katie {
+        grid-area: katie;
+        background-image: url("assets/images/actors-directors/filmmaker3.png");
+        background-clip: padding-box;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 8px 8px 8px;
+    }
+
+    #daniel:hover {
+        background-image: url("assets/images/movie-posters/makerfilm1.png");
+    }
+
+    #karol:hover {
+        background-image: url("assets/images/movie-posters/makerfilm2.png");
+    }
+
+    #katie:hover {
+        background-image: url("assets/images/movie-posters/makerfilm3.png");
+    }
+
+    #article-1 {
+        grid-area: article-1;
+        display: flex;
+        text-indent: 20px;
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1rem;
+        margin: 16px 16px 16px 16px;
+    }
+
+    #article-2 {
+        grid-area: article-2;
+        display: flex;
+        text-indent: 20px;
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1rem;
+        margin: 16px 16px 16px 16px;
+    }
+
+    #article-3 {
+        grid-area: article-3;
+        display: flex;
+        text-indent: 20px;
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1rem;
+        margin: 16px 16px 16px 16px;
+    }
+
+    .read {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: "Montserrat", "sans-serif";
+        font-size: 1rem;
+        margin-right: 16px;
+    }
+
+    .button-container {
+        grid-area: see-more;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: start;
+        padding-top: 40px;
+    }
+
+    .see-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 3px solid white;
+        border-radius: 50px;
+        height: 50px;
+        width: 150px;
+    }
+
+    .see-more:hover {
+        border: 3px solid white;
+        box-shadow: 0 0 15px aqua;
+        cursor: pointer;
+    }
+
+    .back-to-top {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back-to-top-icon i {
+        font-size: 3rem;
+        border: 2px solid white;
+        border-radius: 99px;
+        padding: 10px 16px 10px 16px;
+    }
+
+    .back-to-top-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        height: 100px;
+        width: 100px;
+    }
+
+    #back-to-top-text {
+        font-size: 2rem;
+    }
+
+    .back-to-top-icon:hover i{
+        box-shadow: 0 0 15px aqua;
+    }
+
+    #back-to-top-text:hover {
+        color: aqua;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        width: 100vw;
+        height: 200px;
+        background-color: #2D2D2C;
+        margin-top: 40px;
+    }
+
+    .first-row-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    .second-row-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 40px;
+    }
+
+    .logo-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .language {
+        display: flex;
+        justify-content: center;
     }
 
 }
