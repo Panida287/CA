@@ -649,43 +649,43 @@ body {
     #screams {
         grid-area: 1;
         position: relative;
-        left: 0;
+        left: 12px;
         top: 60px;
-        height: 100%;
-        width: 90%;
+        height: 280px;
+        width: 186px;
     }
 
     #addams {
         grid-area: 2;
         position: relative;
         top: 20px;
-        height: 100%;
-        width: 90%;
+        height: 280px;
+        width: 180px;
     }
 
     #barbie {
         grid-area: 3;
         border: 1px solid white;
         box-shadow: 0 0 10px aqua;
-        height: 100%;
-        width: 90%;
+        height: 280px;
+        width: 180px;
     }
 
     #batman {
         grid-area: 4;
         position: relative;
         top: 20px;
-        height: 100%;
-        width: 90%;
+        height: 280px;
+        width: 180px;
     }
 
     #fast {
         grid-area: 5;
         position: relative;
-        top: 60px;
-        left: 0;
-        height: 100%;
-        width: 90%;
+        top: 40px;
+        left: -19px;
+        height: 280px;
+        width: 180px;
     }
 }
 
@@ -723,23 +723,25 @@ body {
     }
 
     #screams {
-        width: 220px;
+        width: 200px;
+        left: 0;
     }
 
     #addams {
-        width: 220px;
+        width: 200px;
     }
 
     #barbie {
-        width: 220px;
+        width: 200px;
     }
 
     #batman {
-        width: 220px;
+        width: 200px;
     }
 
     #fast {
-        width: 220px;
+        width: 200px;
+        left: 0;
     }
 }
 
