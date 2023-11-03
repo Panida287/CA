@@ -3,6 +3,7 @@
     font-size: 12px;
     color: white;
 }
+
 *, *::before, *::after {
     box-sizing: border-box;
     text-decoration: none;
@@ -17,273 +18,621 @@ root {
 }
 
 body {
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.19) 0%, rgba(0, 255, 255, 0.00) 14.06%, rgba(0, 255, 255, 0.00) 85.42%, rgba(0, 255, 255, 0.19) 100%), #121212;);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.19) 0%, rgba(0, 255, 255, 0.00) 14.06%, rgba(0, 255, 255, 0.00) 85.42%, rgba(0, 255, 255, 0.19) 100%), #121212;
+);
     width: 100%;
     margin: 0 auto;
 }
 
-/*Small*/
-@media (max-width: 640px) {
-    #header-background {
-        background: linear-gradient(180deg, #000 22.92%, rgba(0, 0, 0, 0.69) 51.56%, rgba(0, 0, 0, 0.54) 67.19%, rgba(0, 0, 0, 0.39) 83.85%, rgba(0, 0, 0, 0.00) 100%);
-        width: 100vw;
-        height: 126px;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-    }
+#header-background {
+    background: linear-gradient(180deg, #000 22.92%, rgba(0, 0, 0, 0.69) 51.56%, rgba(0, 0, 0, 0.54) 67.19%, rgba(0, 0, 0, 0.39) 83.85%, rgba(0, 0, 0, 0.00) 100%);
+    width: 100vw;
+    height: 126px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
 
-    .account-menu span {
-        display: none;
-    }
-    .header {
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        margin: 0 auto;
-        height: 280px;
-        display: grid;
-        grid-template-rows: 40px 80px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
+.account-menu span {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    height: 280px;
+    display: grid;
+    grid-template-rows: 40px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
     'logo       slogan        empty'
     'logo       nav-menu      account-menu';
+}
+
+.slogan {
+    grid-area: slogan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    font-family: "Rajdhani", "sans-serif";
+}
+
+.logo {
+    height: 71px;
+    width: 108px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    grid-area: nav-menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.nav-menu {
+    display: none;
+}
+
+#logo-header {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-menu {
+    grid-area: account-menu;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 104px;
+    padding: 0;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 255, 255, 30%);
+    background-color: #121212;
+    z-index: 2;
+    height: 150px;
+    width: 100px;
+}
+
+#menu-label {
+    position: relative;
+}
+
+#menu-checkbox:checked ~ .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-menu li a:hover {
+    color: aqua;
+}
+
+.nav-menu li:first-child {
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.account-menu i:hover {
+    color: aqua;
+}
+
+.contents {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 300px 300px;
+    grid-template-areas:
+        'no-sub         no-sub'
+        'display        display'
+        'share          share';
+}
+
+#banner-1-image {
+    grid-area: no-sub;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: 0 -26px;
+}
+
+.banner-1-text {
+    grid-area: no-sub;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+}
+
+.banner-1-text h1 {
+    position: relative;
+    top: -32px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.banner-paragraph {
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+}
+
+.banner-1-text p {
+    text-align: center;
+    position: relative;
+    top: -8px;
+}
+
+.banner-2 {
+    grid-area: display;
+    display: flex;
+}
+
+#banner-2-image {
+    object-fit: contain;
+    width: 60%;
+    height: auto;
+    margin-left: 40px;
+}
+
+.banner-2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    text-align: end;
+    margin: 0 40px 0 0;
+}
+
+.banner-2-text h2 {
+    font-size: 2rem;
+    padding-bottom: 32px;
+}
+
+.banner-3 {
+    grid-area: share;
+    height: 300px;
+    display: flex;
+    position: relative;
+}
+
+.banner-3-text {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.banner-3-text h2 {
+    font-size: 2rem;
+    padding-bottom: 32px;
+}
+
+.banner-3-text p {
+    text-wrap: none;
+}
+
+#banner-3-image {
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 400px;
+    grid-template-areas:
+        'empty      whats-new      browse'
+        'carousel   carousel       carousel';
+}
+
+.carousel-header {
+    grid-area: whats-new;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+}
+
+.carousel-header h2 {
+    font-size: 2rem;
+}
+
+.browse {
+    grid-area: browse;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin: 40px 0 40px 0;
+}
+
+.browse a:hover {
+    color: aqua;
+}
+
+.carousel {
+    grid-area: carousel;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+    grid-template-areas:
+        '1 2 3 4 5';
+    overflow: hidden;
+}
+
+.movie-poster {
+    height: 270px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.carousel a {
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow: visible;
+    place-items: center;
+    align-items: start;
+    height: 300px;
+}
+
+#screams {
+    grid-area: 1;
+    position: relative;
+    left: -85px;
+    top: 60px;
+    height: 100%;
+    width: 90%;
+}
+
+#addams {
+    grid-area: 2;
+    position: relative;
+    top: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#barbie {
+    grid-area: 3;
+    border: 1px solid white;
+    box-shadow: 0 0 10px aqua;
+    height: 100%;
+    width: 90%;
+}
+
+#batman {
+    grid-area: 4;
+    position: relative;
+    top: 20px;
+    height: 100%;
+    width: 90%;
+}
+
+#fast {
+    grid-area: 5;
+    position: relative;
+    left: 83px;
+    top: 60px;
+    height: 100%;
+    width: 90%;
+}
+
+.filmmaker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filmmaker-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filmmaker-header h2 {
+    font-size: 2rem;
+}
+
+.directors {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 100px 20px 120px;
+    grid-template-areas:
+        'daniel         karol          katie'
+        'article-1      article-2      article-3'
+        'read1          read2          read31'
+        'see-more       see-more       see-more'
+}
+
+#daniel {
+    grid-area: daniel;
+    background-image: url("assets/images/actors-directors/filmmaker1.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+
+}
+
+#karol {
+    grid-area: karol;
+    background-image: url("assets/images/actors-directors/filmmaker2.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+}
+
+#katie {
+    grid-area: katie;
+    background-image: url("assets/images/actors-directors/filmmaker3.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+}
+
+#daniel:hover {
+    background-image: url("assets/images/movie-posters/makerfilm1.png");
+}
+
+#karol:hover {
+    background-image: url("assets/images/movie-posters/makerfilm2.png");
+}
+
+#katie:hover {
+    background-image: url("assets/images/movie-posters/makerfilm3.png");
+}
+
+#article-1 {
+    grid-area: article-1;
+    display: flex;
+    text-indent: 20px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    margin: 16px 16px 16px 16px;
+}
+
+#article-2 {
+    grid-area: article-2;
+    display: flex;
+    text-indent: 20px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    margin: 16px 16px 16px 16px;
+}
+
+#article-3 {
+    grid-area: article-3;
+    display: flex;
+    text-indent: 20px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    margin: 16px 16px 16px 16px;
+}
+
+.read {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    margin-right: 16px;
+}
+
+.button-container {
+    grid-area: see-more;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    padding-top: 40px;
+}
+
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+}
+
+.see-more:hover {
+    border: 3px solid white;
+    box-shadow: 0 0 15px aqua;
+    cursor: pointer;
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top-icon i {
+    font-size: 3rem;
+    border: 2px solid white;
+    border-radius: 99px;
+    padding: 10px 16px 10px 16px;
+}
+
+.back-to-top-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 100px;
+    width: 100px;
+}
+
+#back-to-top-text {
+    font-size: 2rem;
+}
+
+.back-to-top-icon:hover i {
+    box-shadow: 0 0 15px aqua;
+}
+
+#back-to-top-text:hover {
+    color: aqua;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: 100vw;
+    height: 200px;
+    background-color: #2D2D2C;
+    margin-top: 40px;
+}
+
+.first-row-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.second-row-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.first-row-links a:hover, .second-row-links a:hover {
+    color: aqua;
+}
+
+
+/*medium*/
+@media (min-width: 786px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+        'slogan slogan slogan'
+        'logo nav-menu account-menu'
     }
 
-    .slogan {
-        grid-area: slogan;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 8px;
-        font-family: "Rajdhani", "sans-serif";
-    }
-
-    .logo {
-        height: 71px;
-        width: 108px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .nav {
-        grid-area: nav-menu;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #menu-checkbox {
+    .caret-icon {
         display: none;
     }
 
     .nav-menu {
-        display: none;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        justify-content: center;
+        gap: 8px;
+        top: 54px;
+        height: auto;
     }
 
-    #logo-header {
-        grid-area: logo;
+    .nav-menu a {
+        height: 50px;
+        width: 100px;
+        background: url("assets/box.png") center/cover no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .account-menu {
-        grid-area: account-menu;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 104px;
-        padding: 1.5rem;
-        border-radius: 16px;
-        box-shadow: 2px 2px 4px rgba(0,255,255, 30%);
-        background-color: #121212;
-        z-index: 2;
-    }
-
-    #menu-label {
-        position: relative;
-    }
-
-    #menu-checkbox:checked ~ .nav-menu {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        gap: 1.5rem;
-        overflow: visible;
-    }
-
-    .nav-menu li:nth-child(n+2) a:hover {
-        color: aqua;
     }
 
     .nav-menu li:first-child {
-        text-decoration: underline;
+        text-decoration: none;
+        pointer-events: visible;
+        cursor: auto;
+        background: url("assets/box-active.png") center/cover no-repeat;
+    }
+
+    .nav-menu li:first-child {
         pointer-events: none;
         cursor: not-allowed;
     }
 
-    .account-menu i:hover {
-        color: aqua;
-    }
-
-    .contents {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        top: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 300px 300px;
-        grid-template-areas:
-        'no-sub         no-sub'
-        'display        display'
-        'share          share';
-    }
-
-    #banner-1-image {
-        grid-area: no-sub;
-        width: 100%;
-        height: 440px;
-        object-fit: cover;
-        object-position: 0 -26px;
-    }
-
-    .banner-1-text {
-        grid-area: no-sub;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        z-index: 2;
-    }
-
-    .banner-1-text h1 {
-        position: relative;
-        top: -32px;
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .banner-paragraph {
-        font-family: "Montserrat", "sans-serif";
-        font-size: 1rem;
-    }
-
-    .banner-1-text p {
-        text-align: center;
-        position: relative;
-        top: -8px;
-    }
-
-    .banner-2 {
-        grid-area: display;
-        display: flex;
-    }
-
-    #banner-2-image {
-        object-fit: contain;
-        width: 60%;
-        height: auto;
-        margin-left: 40px;
-    }
-
-    .banner-2-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40%;
-        text-align: end;
-        margin: 0 40px 0 0;
-    }
-
-    .banner-2-text h2 {
-        font-size: 2rem;
-        padding-bottom: 32px;
-    }
-
-    .banner-3 {
-        grid-area: share;
-        height: 300px;
-        display: flex;
-        position: relative;
-    }
-
-    .banner-3-text {
-        display: flex;
-        width: 60%;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .banner-3-text h2 {
-        font-size: 2rem;
-        padding-bottom: 32px;
-    }
-
-    .banner-3-text p {
-        text-wrap: none;
-    }
-
-    #banner-3-image {
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .carousel-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 400px;
-        grid-template-areas:
-        'empty      whats-new      browse'
-        'carousel   carousel       carousel';
-    }
-
-    .carousel-header {
-        grid-area: whats-new;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 40px 0 40px 0;
-    }
-
-    .carousel-header h2 {
-        font-size: 2rem;
-    }
-
-    .browse {
-        grid-area: browse;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding-right: 20px;
-        margin: 40px 0 40px 0;
+    .nav-menu li a:hover {
+        background-image: url("assets/box-hover.png");
     }
 
     .carousel {
         grid-area: carousel;
         display: grid;
         height: 100%;
-        grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-columns: 230px 25% 25% 25% 230px;
         grid-template-areas:
         '1 2 3 4 5';
-        overflow: hidden;
+        overflow: visible;
+        position: relative;
+        left: -106px;
     }
 
     .movie-poster {
         height: 270px;
         width: auto;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 24px;
         overflow: hidden;
     }
@@ -300,7 +649,7 @@ body {
     #screams {
         grid-area: 1;
         position: relative;
-        left: -85px;
+        left: 0;
         top: 60px;
         height: 100%;
         width: 90%;
@@ -333,240 +682,100 @@ body {
     #fast {
         grid-area: 5;
         position: relative;
-        left: 83px;
         top: 60px;
+        left: 0;
         height: 100%;
         width: 90%;
     }
-
-    .filmmaker-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-
-    .filmmaker-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .filmmaker-header h2 {
-        font-size: 2rem;
-    }
-
-    .directors {
-        display: grid;
-        overflow: hidden;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 100px 20px 120px;
-        grid-template-areas:
-        'daniel         karol          katie'
-        'article-1      article-2      article-3'
-        'read1          read2          read31'
-        'see-more       see-more       see-more'
-    }
-
-    #daniel {
-        grid-area: daniel;
-        background-image: url("assets/images/actors-directors/filmmaker1.png");
-        background-clip: padding-box;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8px 8px 8px 8px;
-
-    }
-
-    #karol {
-        grid-area: karol;
-        background-image: url("assets/images/actors-directors/filmmaker2.png");
-        background-clip: padding-box;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8px 8px 8px 8px;
-    }
-
-    #katie {
-        grid-area: katie;
-        background-image: url("assets/images/actors-directors/filmmaker3.png");
-        background-clip: padding-box;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8px 8px 8px 8px;
-    }
-
-    #daniel:hover {
-        background-image: url("assets/images/movie-posters/makerfilm1.png");
-    }
-
-    #karol:hover {
-        background-image: url("assets/images/movie-posters/makerfilm2.png");
-    }
-
-    #katie:hover {
-        background-image: url("assets/images/movie-posters/makerfilm3.png");
-    }
-
-    #article-1 {
-        grid-area: article-1;
-        display: flex;
-        text-indent: 20px;
-        font-family: "Montserrat", "sans-serif";
-        font-size: 1rem;
-        margin: 16px 16px 16px 16px;
-    }
-
-    #article-2 {
-        grid-area: article-2;
-        display: flex;
-        text-indent: 20px;
-        font-family: "Montserrat", "sans-serif";
-        font-size: 1rem;
-        margin: 16px 16px 16px 16px;
-    }
-
-    #article-3 {
-        grid-area: article-3;
-        display: flex;
-        text-indent: 20px;
-        font-family: "Montserrat", "sans-serif";
-        font-size: 1rem;
-        margin: 16px 16px 16px 16px;
-    }
-
-    .read {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        font-family: "Montserrat", "sans-serif";
-        font-size: 1rem;
-        margin-right: 16px;
-    }
-
-    .button-container {
-        grid-area: see-more;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: start;
-        padding-top: 40px;
-    }
-
-    .see-more {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        border: 3px solid white;
-        border-radius: 50px;
-        height: 50px;
-        width: 150px;
-    }
-
-    .see-more:hover {
-        border: 3px solid white;
-        box-shadow: 0 0 15px aqua;
-        cursor: pointer;
-    }
-
-    .back-to-top {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .back-to-top-icon i {
-        font-size: 3rem;
-        border: 2px solid white;
-        border-radius: 99px;
-        padding: 10px 16px 10px 16px;
-    }
-
-    .back-to-top-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        height: 100px;
-        width: 100px;
-    }
-
-    #back-to-top-text {
-        font-size: 2rem;
-    }
-
-    .back-to-top-icon:hover i{
-        box-shadow: 0 0 15px aqua;
-    }
-
-    #back-to-top-text:hover {
-        color: aqua;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr 1fr;
-        width: 100vw;
-        height: 200px;
-        background-color: #2D2D2C;
-        margin-top: 40px;
-    }
-
-    .first-row-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 8px;
-        margin-left: 40px;
-        margin-top: 40px;
-    }
-
-    .second-row-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 8px;
-        margin-top: 40px;
-    }
-
-    .logo-footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .language {
-        display: flex;
-        justify-content: center;
-    }
-
 }
 
-/*Medium*/
-@media (min-width: 768px) {
+@media (min-width: 960px) {
+    #banner-1-image {
+        grid-area: no-sub;
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        object-position: 0 -26px;
+    }
 
+    .banner-1-text h1,
+    .banner-2-text h2,
+    .banner-3-text h2 {
+        font-size: 3rem;
+    }
+
+    .banner-1-text p,
+    .banner-2-text p,
+    .banner-3-text p {
+        font-size: 1.5rem;
+    }
+
+    #screams {
+        width: 220px;
+    }
+
+    #addams {
+        width: 220px;
+    }
+
+    #barbie {
+        width: 220px;
+    }
+
+    #batman {
+        width: 220px;
+    }
+
+    #fast {
+        width: 220px;
+    }
 }
 
 /*Large*/
 @media (min-width: 1024px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas:
+            'slogan slogan slogan'
+            'logo nav-menu account-menu'
+    }
+
+    .account-menu {
+        display: flex;
+    }
+
+    .account-menu span {
+        display: inline-block;
+        padding-left: 4px;
+    }
+
+    .account-menu i {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        grid-template-columns: 1fr 2fr 400px;
+    }
+
+    .banner-2-text {
+        padding-right: 120px;
+    }
+
+    .banner-3-text {
+        padding-left: 120px;
+    }
+
+    .account-menu {
+        margin-right: 40px;
+    }
+
+    .nav-menu a {
+        height: 60px;
+        width: 120px;
+    }
 
 }
