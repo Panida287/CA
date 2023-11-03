@@ -1,0 +1,456 @@
+* {
+    font-family: "orbitron", sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    overflow: auto;
+}
+
+root {
+    --text-color: white;
+    --text-color-hover: aqua;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.19) 0%, rgba(0, 255, 255, 0.00) 14.06%, rgba(0, 255, 255, 0.00) 85.42%, rgba(0, 255, 255, 0.19) 100%), #121212;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header-background {
+    background: linear-gradient(180deg, #000 22.92%, rgba(0, 0, 0, 0.69) 51.56%, rgba(0, 0, 0, 0.54) 67.19%, rgba(0, 0, 0, 0.39) 83.85%, rgba(0, 0, 0, 0.00) 100%);
+    width: 100vw;
+    height: 126px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.account-menu span {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    height: 280px;
+    display: grid;
+    grid-template-rows: 40px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'logo       slogan        empty'
+    'logo       nav-menu      account-menu';
+}
+
+.slogan {
+    grid-area: slogan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    font-family: "Rajdhani", "sans-serif";
+}
+
+.logo {
+    height: 71px;
+    width: 108px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    grid-area: nav-menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.nav-menu {
+    display: none;
+}
+
+#logo-header {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-menu {
+    grid-area: account-menu;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 104px;
+    padding: 0;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 255, 255, 30%);
+    background-color: #121212;
+    z-index: 2;
+    height: 150px;
+    width: 100px;
+}
+
+#menu-label {
+    position: relative;
+}
+
+#menu-checkbox:checked ~ .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-menu li a:hover {
+    color: aqua;
+}
+
+.nav-menu li:first-child {
+    text-decoration: underline;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.account-menu i:hover {
+    color: aqua;
+}
+
+.promo-poster {
+    display: flex;
+    height: 500px;
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.promo-description {
+    display: grid;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 160px;
+    padding-left: 40px;
+    padding-right: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+    'title      title       title'
+    'minutes    minutes     res'
+    'text       text        text'
+    'watch      empty       buy'
+    'add        add         add';
+}
+
+#promo-title {
+    grid-area: title;
+    display: flex;
+    width: 100%;
+}
+
+#minutes {
+    grid-area: minutes;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 8px;
+}
+
+#resolution {
+    grid-area: res;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 26px;
+    height: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+#newworld-text {
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#watch-trailer {
+    grid-area: watch;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#buy {
+    grid-area: buy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#add-to-wishlist {
+    grid-area: add;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#watch-trailer:hover {
+    box-shadow: 0 0 15px aqua;
+}
+
+#buy:hover {
+    box-shadow: 0 0 15px aqua;
+}
+
+#add-to-wishlist:hover {
+    color: aqua;
+}
+
+.browse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: auto;
+    padding-right: 20px;
+    width: 100%;
+}
+
+#browse-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 20px;
+    height: 20px;
+}
+
+#browse-label:hover span {
+    color: aqua;
+}
+
+#browse-label:hover i {
+    color: aqua;
+}
+
+.browse-by {
+    display: flex;
+    width: 200px;
+}
+
+#browse-checkbox {
+    display: none;
+}
+
+#browse-label i {
+    display: flex;
+    gap: 4px;
+}
+
+.browse-by ul {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    left: -200px;
+    gap: 10px;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.browse-by a {
+    display: flex;
+    height: 50px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/box.png") center/cover no-repeat;
+}
+
+.browse-by a:hover {
+    background: url("assets/box-hover.png") center/cover no-repeat;
+}
+
+#browse-checkbox:checked ~ ul {
+    left: -70px;
+}
+
+#browse-checkbox:checked ~ #browse-label {
+    left: 130px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search-checkbox {
+    display: none;
+}
+
+.search-container {
+    position: relative;
+    top: 20px;
+    right: -250px;
+    transition: 0.5s;
+}
+
+#search-checkbox-label {
+    position: relative;
+    right: -164px;
+    transition: 0.5s;
+}
+
+#search-checkbox-label {
+    position: relative;
+    top: 26px;
+}
+
+#search-bar {
+    margin-left: 8px;
+    border-radius: 16px;
+}
+
+#search-icon {
+    cursor: pointer;
+}
+
+#search-checkbox:checked ~ .search-container {
+    right: 0;
+}
+
+    /*medium*/
+@media (min-width: 786px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+        'slogan slogan slogan'
+        'logo nav-menu account-menu'
+    }
+
+    .caret-icon {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        background: transparent;
+        box-shadow: none;
+        justify-content: center;
+        gap: 8px;
+        top: 54px;
+        height: auto;
+    }
+
+    .nav-menu a {
+        height: 50px;
+        width: 100px;
+        background: url("assets/box.png") center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu li:first-child {
+        text-decoration: none;
+        pointer-events: visible;
+        cursor: auto;
+        background: url("assets/box-active.png") center/cover no-repeat;
+    }
+
+    .nav-menu li:first-child {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    .nav-menu li a:hover {
+        background-image: url("assets/box-hover.png");
+    }
+
+}
+
+/*Large*/
+@media (min-width: 1024px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas:
+            'slogan slogan slogan'
+            'logo nav-menu account-menu'
+    }
+
+    .account-menu {
+        display: flex;
+    }
+
+    .account-menu span {
+        display: inline-block;
+        padding-left: 4px;
+    }
+
+    .account-menu i {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        grid-template-columns: 1fr 2fr 400px;
+    }
+
+    .account-menu {
+        margin-right: 40px;
+    }
+
+    .nav-menu a {
+        height: 60px;
+        width: 120px;
+    }
+}

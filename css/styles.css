@@ -775,14 +775,6 @@ body {
         grid-template-columns: 1fr 2fr 400px;
     }
 
-    .banner-2-text {
-        padding-right: 120px;
-    }
-
-    .banner-3-text {
-        padding-left: 120px;
-    }
-
     .account-menu {
         margin-right: 40px;
     }
@@ -790,6 +782,14 @@ body {
     .nav-menu a {
         height: 60px;
         width: 120px;
+    }
+
+    .banner-2-text {
+        padding-right: 120px;
+    }
+
+    .banner-3-text {
+        padding-left: 120px;
     }
 
     #banner-1-image {

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Square Eyes</title>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+    <link rel="stylesheet" href="css/browse.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Rajdhani&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<span id="header-background"></span>
+<header class="header">
+    <p class="slogan">Connecting film lovers</p>
+    <div id="logo-header">
+        <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+    </div>
+    <div class="nav">
+        <input type="checkbox" id="menu-checkbox"/>
+        <label for="menu-checkbox" id="menu-label">
+                <span class="caret-icon">
+                    Menu
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+        </label>
+        <ul class="nav-menu">
+            <li>
+                <a id="home" href="index.html">Home</a>
+            </li>
+            <li>
+                <a id="browse" href="#">Browse</a>
+            </li>
+            <li>
+                <a id="about" href="#">About us</a>
+            </li>
+            <li>
+                <a id="contact" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-menu">
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Login / Sign up</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>0 item(s)</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+    </div>
+</header>
+
+<div class="promo-poster">
+    <img alt="new world movie poster" class="banner" src="assets/images/movie-posters/newworld-poster.png" height="688"
+         width="1440"/>
+</div>
+<div class="promo-container">
+    <div class="promo-description">
+        <img alt="new world" id="promo-title" src="assets/images/newworld.png" height="67" width="437"/>
+        <p id="minutes">
+            90 minutes / sci-fi
+        </p>
+        <p id="resolution">
+            4K
+        </p>
+        <p id="newworld-text">
+            After the third extinctions, human kind and robots and exhausted with endless attempts to find new world
+        </p>
+        <button type="button" id="watch-trailer">
+            Watch Trailer
+        </button>
+        <button type="button" id="buy">
+            Buy for 99kr
+        </button>
+        <button type="button" id="add-to-wishlist">
+            + add to wishlist
+        </button>
+    </div>
+</div>
+
+<div class="browse">
+    <div class="browse-by">
+        <input type="checkbox" id="browse-checkbox"/>
+        <label for="browse-checkbox" id="browse-label">
+        <i class="fa-solid fa-arrow-left">
+            <span>
+                Browse by
+            </span>
+        </i>
+        </label>
+        <ul>
+            <li>
+                <a class="hidden-menu">
+                    Genre
+                </a>
+            </li>
+            <li>
+                <a class="hidden-menu">
+                    Wishlist
+                </a>
+            </li>
+            <li>
+                <a class="hidden-menu">
+                    Rating
+                </a>
+            </li>
+            <li>
+                <a class="hidden-menu">
+                    Director
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="checkbox" id="search-checkbox"/>
+        <label for="search-checkbox" id="search-checkbox-label">
+            <i id="search-icon" class="fas fa-search"></i>
+        </label>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search...">
+            <label for="search-bar"></label>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
