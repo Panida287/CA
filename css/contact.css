@@ -124,12 +124,181 @@ body {
     color: aqua;
 }
 
-.nav-menu li:nth-child(3) {
+.nav-menu li:nth-child(4) {
     text-decoration: underline;
 }
 
 .account-menu i:hover {
     color: aqua;
+}
+
+#chat-girl {
+    position: absolute;
+    top: 0;
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.contact-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas:
+    'contact'
+    'form';
+    height: 100%;
+    width: 100%;
+}
+
+.contact-us h1 {
+    grid-area: contact;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    top: 160px;
+    font-size: 2rem;
+}
+
+#glow-box {
+    grid-area: form;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contact-us-box {
+    grid-area: form;
+    display: flex;
+    width: 100%;
+    padding: 40px;
+}
+
+.faq-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.faq-text a {
+    text-decoration: underline;
+}
+
+.contact-form {
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 40px 60px 40px 0;
+    grid-template-areas:
+    'your-name    msg'
+    'email        msg'
+    'phone        msg';
+}
+
+#name-form {
+    grid-area: your-name;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+#email-form {
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+#phone-form {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+#msg-box-form {
+    grid-area: msg;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+#msg-box {
+    height: 80%;
+    width: 100%;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#name,
+#email,
+#phone-number {
+    border-radius: 24px;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+}
+
+#name,
+#email,
+#phone-number,
+#msg-box:focus {
+    outline: none;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    display: flex;
+    gap: 4px;
+    padding: 40px;
+}
+
+.location p, i{
+    font-size: 1.5rem;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    box-shadow: 0 0 15px aqua;
 }
 
 .back-to-top {
@@ -207,126 +376,6 @@ body {
     color: aqua;
 }
 
-.about-us {
-    display: grid;
-    position: relative;
-    grid-template-columns: 2fr 1.5fr;
-    grid-template-rows: 240px auto 200px 1fr;
-    grid-template-areas:
-    'about-header       about-header'
-    'about-us           about-us'
-    'mission-header      mission-header'
-    'our-mission        our-mission-text';
-    margin-bottom: 80px;
-}
-
-.about-us-header {
-    grid-area: about-header;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-bottom: 40px;
-}
-
-.about-us-header h1 {
-    font-size: 2rem;
-}
-
-#many-tvs {
-    grid-area: about-us;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    object-fit: cover;
-}
-
-.about-us-text {
-    grid-area: about-us;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.about-us-text p {
-    display: flex;
-    width: 50%;
-    position: relative;
-    top: 100px;
-    text-align: center;
-    font-family: "Montserrat", "sans-serif";
-    font-size: 1.5rem;
-    line-height: 3rem;
-}
-
-.our-mission-header {
-    grid-area: mission-header;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.our-mission-header h2 {
-    font-size: 2rem;
-}
-
-#movie-set {
-    grid-area: our-mission;
-    padding-left: 40px;
-    width: 90%;
-    object-fit: cover;
-}
-
-.our-mission-text {
-    grid-area: our-mission-text;
-    display: flex;
-    padding-right: 80px;
-    align-items: center;
-}
-
-.our-mission-text p {
-    font-family: "Montserrat", "sans-serif";
-    text-indent: 40px;
-    font-size: 1.5rem;
-    line-height: 3rem;
-}
-
-.back-to-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.back-to-top-icon i {
-    font-size: 3rem;
-    border: 2px solid white;
-    border-radius: 99px;
-    padding: 10px 16px 10px 16px;
-}
-
-.back-to-top-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    height: 100px;
-    width: 100px;
-}
-
-#back-to-top-text {
-    font-size: 2rem;
-}
-
-.back-to-top-icon:hover i {
-    box-shadow: 0 0 15px aqua;
-}
-
-#back-to-top-text:hover {
-    color: aqua;
-}
-
 @media (min-width: 786px) {
 
     .header {
@@ -361,7 +410,7 @@ body {
         align-items: center;
     }
 
-    .nav-menu li:nth-child(3) {
+    .nav-menu li:nth-child(4) {
         text-decoration: none;
         background: url("assets/box-active.png") center/cover no-repeat;
     }
