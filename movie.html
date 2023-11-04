@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Square Eyes</title>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+    <link rel="stylesheet" href="css/movie.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron&family=Rajdhani&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<span id="header-background"></span>
+<header class="header">
+    <p class="slogan">Connecting film lovers</p>
+    <div id="logo-header">
+        <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+    </div>
+    <div class="nav">
+        <input type="checkbox" id="menu-checkbox"/>
+        <label for="menu-checkbox" id="menu-label">
+                <span class="caret-icon">
+                    Menu
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+        </label>
+        <ul class="nav-menu">
+            <li>
+                <a id="home" href="index.html">Home</a>
+            </li>
+            <li>
+                <a id="browse" href="browse.html">Browse</a>
+            </li>
+            <li>
+                <a id="about" href="about-us.html">About us</a>
+            </li>
+            <li>
+                <a id="contact" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-menu">
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Login / Sign up</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>0 item(s)</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+    </div>
+</header>
+
+<div class="movie-detail">
+    <a href="#" id="back">
+        < Back
+    </a>
+    <img alt="video player" id="player" src="assets/images/video-player.png" width="799" height="422">
+    <div class="container">
+        <img alt="new world" id="title" src="assets/images/newworld.png" height="67" width="437"/>
+        <p id="resolution">
+            4K
+        </p>
+        <p id="rating-text">
+            Rating
+        </p>
+        <div id="rating">
+            <img id="rating-circle" alt="rating 75%" src="assets/images/rating.png" width="56" height="56"/>
+        </div>
+        <div class="descriptions">
+            <p>
+                Year
+            </p>
+            <p>
+                Genre
+            </p>
+            <p>
+                Duration
+            </p>
+            <p>
+                Audio
+            </p>
+            <p>
+                Subtitle
+            </p>
+        </div>
+        <div class="descriptions-text">
+            <p>
+                2023
+            </p>
+            <p>
+                Sci-fi
+            </p>
+            <p>
+                90 minutes
+            </p>
+            <p>
+                English
+            </p>
+            <p>
+                English/Norwegian
+            </p>
+        </div>
+        <p id="newworld-text">
+            After the third extinctions, humankind and robots and exhausted with endless attempts to find new world
+        </p>
+    </div>
+    <div class="button-container">
+        <div class="button-1">
+            <button type="button" id="add-to-wishlist">
+                + add to wishlist
+            </button>
+        </div>
+        <div class="button-2">
+            <button type="button" id="rate-movie">
+                <i class="fa-regular fa-thumbs-up"></i>
+                Rate this movie
+            </button>
+        </div>
+        <div class="button-3">
+            <button type="button" id="buy">
+                Buy for 99kr
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="movies-row">
+    <h2 class="more-like-this">
+        More like this
+    </h2>
+    <div class="posters-grid">
+        <div class="movie-container">
+            <a>
+                <img class="poster" alt="addams family" src="assets/images/movie-posters/addams.jpeg" height="741"
+                     width="500"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a>
+                <img class="poster" alt="barbie" src="assets/images/movie-posters/barbie.jpg" height="3000"
+                     width="2000"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a>
+                <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741"
+                     width="500"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a>
+                <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
+                     width="1280"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a>
+                <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792"
+                     width="500"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="back-to-top">
+    <a href="#" class="back-to-top-icon">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a id="back-to-top-text" href="#">BACK TO TOP</a>
+</div>
+
+<footer class="footer">
+    <div class="first-row-links">
+        <a href="#">
+            About us
+        </a>
+        <a href="#">
+            Contact us
+        </a>
+        <a href="#">
+            Copyright
+        </a>
+        <a href="#">
+            Help center
+        </a>
+        <a href="#">
+            Privacy policy
+        </a>
+    </div>
+    <div class="second-row-links">
+        <a href="#">
+            Terms of service
+        </a>
+        <a href="#">
+            Advertise with us
+        </a>
+        <a href="#">
+            Feedback and suggestions
+        </a>
+        <a href="#">
+            Partnerships
+        </a>
+        <a href="#">
+            Copyright 2023 Square eyes
+        </a>
+    </div>
+    <div class="logo-footer">
+        <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+    </div>
+</footer>
+
+</body>
+</html>
