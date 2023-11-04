@@ -124,306 +124,12 @@ body {
     color: aqua;
 }
 
-.nav-menu li:nth-child(2) {
+.nav-menu li:nth-child(3) {
     text-decoration: underline;
 }
 
 .account-menu i:hover {
     color: aqua;
-}
-
-.promo-poster {
-    display: flex;
-    height: 500px;
-}
-
-.banner {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.promo-description {
-    display: grid;
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    top: 160px;
-    padding-left: 40px;
-    padding-right: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 2fr 2fr 1fr;
-    grid-template-areas:
-    'title      title       title'
-    'minutes    minutes     res'
-    'text       text        text'
-    'watch      empty       buy'
-    'add        add         add';
-}
-
-#promo-title {
-    grid-area: title;
-    display: flex;
-    width: 100%;
-}
-
-#minutes {
-    grid-area: minutes;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 8px;
-}
-
-#resolution {
-    grid-area: res;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 8px;
-    width: 26px;
-    height: 20px;
-    margin-left: 40px;
-    margin-top: 10px;
-}
-
-#newworld-text {
-    grid-area: text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
-
-#watch-trailer {
-    grid-area: watch;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50px;
-    height: 40px;
-    width: 140px;
-    margin-top: 16px;
-    cursor: pointer;
-}
-
-#buy {
-    grid-area: buy;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 50px;
-    height: 40px;
-    width: 140px;
-    margin-top: 16px;
-    cursor: pointer;
-}
-
-#add-to-wishlist {
-    grid-area: add;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: transparent;
-    border: 0;
-    border-radius: 50px;
-    height: 40px;
-    width: 100%;
-    cursor: pointer;
-}
-
-#watch-trailer:hover {
-    box-shadow: 0 0 15px aqua;
-}
-
-#buy:hover {
-    box-shadow: 0 0 15px aqua;
-}
-
-#add-to-wishlist:hover {
-    color: aqua;
-}
-
-.browse {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px;
-    padding-left: 20px;
-    padding-top: 20px;
-    height: 100px;
-    padding-right: 20px;
-    width: 100%;
-    overflow: hidden;
-}
-
-#browse-label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    top: 16px;
-    height: 20px;
-}
-
-#browse-label:hover span {
-    color: aqua;
-}
-
-#browse-label:hover i {
-    color: aqua;
-}
-
-.browse-by {
-    display: flex;
-    width: 200px;
-}
-
-#browse-checkbox {
-    display: none;
-}
-
-#browse-label i {
-    display: flex;
-    gap: 4px;
-}
-
-.browse-by ul {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    flex-direction: column;
-    left: -200px;
-    padding: 0;
-    height: 240px;
-    transition: 0.5s;
-    z-index: 5;
-}
-
-.browse-by a {
-    display: flex;
-    height: 50px;
-    width: 100px;
-    justify-content: center;
-    align-items: center;
-    background: url("assets/box.png") center/cover no-repeat;
-}
-
-.browse-by a:hover {
-    background: url("assets/box-hover.png") center/cover no-repeat;
-}
-
-#browse-checkbox:checked ~ ul {
-    left: 30px;
-}
-
-#browse-checkbox:checked ~ #browse-label {
-    left: 130px;
-}
-
-.search {
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
-#search-checkbox {
-    display: none;
-}
-
-.search-container {
-    position: relative;
-    right: -250px;
-    transition: 0.5s;
-    padding: 20px;
-}
-
-#search-checkbox-label {
-    position: relative;
-    right: -164px;
-    transition: 0.5s;
-}
-
-#search-checkbox-label {
-    position: relative;
-    top: 26px;
-    right: -210px;
-}
-
-#search-bar {
-    margin-left: 8px;
-    border-radius: 16px;
-}
-
-#search-icon {
-    cursor: pointer;
-}
-
-#search-checkbox:checked ~ .search-container {
-    right: 0;
-}
-
-#search-checkbox:checked ~ #search-checkbox-label {
-    right: -4px;
-}
-
-#search-bar:focus {
-    box-shadow: 0 0 15px aqua;
-    outline: none;
-    border: none;
-}
-
-.recommended-header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    font-size: 2rem;
-    padding-bottom: 40px;
-}
-
-.posters-grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-    align-content: center;
-    background-color: rgba(45, 45, 44, 0.4);
-}
-
-.movie-container  {
-    display: flex;
-    height: 300px;
-    width: 250px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.movie-container a {
-    padding: 30px;
-    overflow: hidden;
-}
-
-.poster {
-    position: relative;
-    height: 250px;
-    width: 170px;
-    object-fit: cover;
-    border-radius: 24px;
-}
-
-.poster:hover {
-    border: 1px solid white;
-    box-shadow: 0 0 15px aqua;
-    top: -10px;
-}
-
-.new-release-header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    font-size: 2rem;
-    padding: 40px;
 }
 
 .back-to-top {
@@ -501,6 +207,124 @@ body {
     color: aqua;
 }
 
+.about-us {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px 1fr 200px 1fr;
+    grid-template-areas:
+    'about-header       about-header'
+    'about-us           about-us'
+    'mission-header      mission-header'
+    'our-mission        our-mission-text';
+}
+
+.about-us-header {
+    grid-area: about-header;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.about-us-header h1 {
+    font-size: 2rem;
+}
+
+#many-tvs {
+    grid-area: about-us;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+}
+
+.about-us-text {
+    grid-area: about-us;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-us-text p {
+    display: flex;
+    width: 50%;
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.our-mission-header {
+    grid-area: mission-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-mission-header h2 {
+    font-size: 2rem;
+}
+
+#movie-set {
+    grid-area: our-mission;
+    padding-left: 40px;
+    width: 90%;
+    object-fit: cover;
+}
+
+.our-mission-text {
+    grid-area: our-mission-text;
+    display: flex;
+    padding-right: 80px;
+    align-items: center;
+}
+
+.our-mission-text p {
+    font-family: "Montserrat", "sans-serif";
+    text-indent: 40px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top-icon i {
+    font-size: 3rem;
+    border: 2px solid white;
+    border-radius: 99px;
+    padding: 10px 16px 10px 16px;
+}
+
+.back-to-top-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 100px;
+    width: 100px;
+}
+
+#back-to-top-text {
+    font-size: 2rem;
+}
+
+.back-to-top-icon:hover i {
+    box-shadow: 0 0 15px aqua;
+}
+
+#back-to-top-text:hover {
+    color: aqua;
+}
 
 @media (min-width: 786px) {
 
@@ -536,7 +360,7 @@ body {
         align-items: center;
     }
 
-    .nav-menu li:nth-child(2) {
+    .nav-menu li:nth-child(3) {
         text-decoration: none;
         background: url("assets/box-active.png") center/cover no-repeat;
     }
@@ -569,7 +393,6 @@ body {
         position: relative;
         top: -1px;
     }
-
 }
 
 @media (min-width: 1200px) {

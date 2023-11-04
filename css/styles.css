@@ -170,10 +170,9 @@ body {
 }
 
 .banner-1-text h1 {
-    position: relative;
-    top: -32px;
     text-align: center;
     font-size: 2rem;
+    padding: 20px;
 }
 
 .banner-paragraph {
@@ -183,8 +182,6 @@ body {
 
 .banner-1-text p {
     text-align: center;
-    position: relative;
-    top: -8px;
 }
 
 .banner-2 {
@@ -243,107 +240,65 @@ body {
     object-fit: contain;
 }
 
-.carousel-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 400px;
-    grid-template-areas:
-        'empty      whats-new      browse'
-        'carousel   carousel       carousel';
-}
-
 .carousel-header {
-    grid-area: whats-new;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0 40px 0;
+    flex-direction: column;
+    margin-top: 40px;
 }
 
 .carousel-header h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
 }
 
 .browse {
-    grid-area: browse;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     padding-right: 20px;
-    margin: 40px 0 40px 0;
 }
 
 .browse a:hover {
     color: aqua;
 }
 
-.carousel {
-    grid-area: carousel;
+.posters-grid {
     display: grid;
-    height: 100%;
-    grid-template-columns: 0.1fr 1fr 1fr 1fr 0.1fr;
-    grid-template-areas:
-        '1 2 3 4 5';
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    align-content: center;
+}
+
+.movie-container  {
+    display: flex;
+    height: 300px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.movie-poster {
-    height: 270px;
-    width: auto;
+.movie-container a {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.poster {
+    position: relative;
+    height: 250px;
+    width: 170px;
     object-fit: cover;
     border-radius: 24px;
-    overflow: hidden;
 }
 
-.carousel a {
-    display: grid;
-    grid-template-rows: 1fr;
-    overflow: visible;
-    place-items: center;
-    align-items: start;
-    height: 300px;
-}
-
-#screams {
-    grid-area: 1;
-    position: relative;
-    left: -85px;
-    top: 60px;
-    height: 100%;
-    width: 90%;
-}
-
-#addams {
-    grid-area: 2;
-    position: relative;
-    top: 20px;
-    height: 100%;
-    width: 90%;
-}
-
-#barbie {
-    grid-area: 3;
+.poster:hover {
     border: 1px solid white;
-    box-shadow: 0 0 10px aqua;
-    height: 100%;
-    width: 90%;
-}
-
-#batman {
-    grid-area: 4;
-    position: relative;
-    top: 20px;
-    height: 100%;
-    width: 90%;
-}
-
-#fast {
-    grid-area: 5;
-    position: relative;
-    left: 83px;
-    top: 60px;
-    height: 100%;
-    width: 90%;
+    box-shadow: 0 0 15px aqua;
+    top: -10px;
 }
 
 .filmmaker-container {
@@ -351,6 +306,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .filmmaker-header {
@@ -429,38 +385,50 @@ body {
 
 #article-1 {
     grid-area: article-1;
-    display: flex;
-    text-indent: 20px;
-    font-family: "Montserrat", "sans-serif";
-    font-size: 1rem;
-    margin: 16px 16px 16px 16px;
 }
 
 #article-2 {
     grid-area: article-2;
-    display: flex;
-    text-indent: 20px;
-    font-family: "Montserrat", "sans-serif";
-    font-size: 1rem;
-    margin: 16px 16px 16px 16px;
 }
 
 #article-3 {
     grid-area: article-3;
+}
+
+#article-1,
+#article-2,
+#article-3 {
     display: flex;
+    width: 100%;
+    justify-content: center;
     text-indent: 20px;
     font-family: "Montserrat", "sans-serif";
     font-size: 1rem;
-    margin: 16px 16px 16px 16px;
+    padding: 16px;
+}
+
+#article-1 p,
+#article-2 p,
+#article-3 p {
+    width: 200px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
 }
 
 .read {
     display: flex;
-    align-items: center;
+    width: 100%;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+}
+
+.read a {
+    display: flex;
+    width: 200px;
     justify-content: flex-end;
     font-family: "Montserrat", "sans-serif";
     font-size: 1rem;
-    margin-right: 16px;
+    padding-right: 16px;
 }
 
 .button-container {
@@ -603,89 +571,13 @@ body {
 
     .nav-menu li:first-child {
         text-decoration: none;
-        pointer-events: visible;
-        cursor: auto;
-        background: url("assets/box-active.png") center/cover no-repeat;
-    }
-
-    .nav-menu li:first-child {
-        pointer-events: none;
         cursor: not-allowed;
+        background: url("assets/box-active.png") center/cover no-repeat;
     }
 
     .nav-menu li a:hover {
         background-image: url("assets/box-hover.png");
-    }
-
-    .carousel {
-        grid-area: carousel;
-        display: grid;
-        height: 100%;
-        grid-template-columns: 230px 25% 25% 25% 230px;
-        grid-template-areas:
-        '1 2 3 4 5';
-        overflow: visible;
-        position: relative;
-        left: -106px;
-    }
-
-    .movie-poster {
-        height: 270px;
-        width: auto;
-        object-fit: cover;
-        border-radius: 24px;
-        overflow: hidden;
-    }
-
-    .carousel a {
-        display: grid;
-        grid-template-rows: 1fr;
-        overflow: visible;
-        place-items: center;
-        align-items: start;
-        height: 300px;
-    }
-
-    #screams {
-        grid-area: 1;
-        position: relative;
-        left: 12px;
-        top: 60px;
-        height: 280px;
-        width: 186px;
-    }
-
-    #addams {
-        grid-area: 2;
-        position: relative;
-        top: 20px;
-        height: 280px;
-        width: 180px;
-    }
-
-    #barbie {
-        grid-area: 3;
-        border: 1px solid white;
-        box-shadow: 0 0 10px aqua;
-        height: 280px;
-        width: 180px;
-    }
-
-    #batman {
-        grid-area: 4;
-        position: relative;
-        top: 20px;
-        height: 280px;
-        width: 180px;
-    }
-
-    #fast {
-        grid-area: 5;
-        position: relative;
-        top: 40px;
-        left: -19px;
-        height: 280px;
-        width: 180px;
+        color: white;
     }
 }
 
@@ -694,10 +586,6 @@ body {
 }
 
 .banner-3 {
-    margin-top: 40px;
-}
-
-.carousel-container {
     margin-top: 40px;
 }
 
@@ -720,28 +608,6 @@ body {
     .banner-2-text p,
     .banner-3-text p {
         font-size: 1.5rem;
-    }
-
-    #screams {
-        width: 200px;
-        left: 0;
-    }
-
-    #addams {
-        width: 200px;
-    }
-
-    #barbie {
-        width: 200px;
-    }
-
-    #batman {
-        width: 200px;
-    }
-
-    #fast {
-        width: 200px;
-        left: 0;
     }
 }
 
