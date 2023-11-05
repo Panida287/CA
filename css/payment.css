@@ -179,7 +179,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(11, auto);
-    width: 60%;
+    width: 50%;
     grid-gap: 10px;
     grid-template-areas:
     'payment-logos payment-logos'
@@ -187,21 +187,31 @@ body {
     'name last-name'
     'card-number card-number'
     'expiry cvv'
-    'phone phone-1'
+    'phone phone1'
     'address address'
     'city country'
-    'zip zip-1'
+    'zip zip1'
     'radio-1 radio-1'
-    'radio-2 radio-2';
+    'radio-2 radio-2'
+    'buttons buttons';
 }
 
 .payment-logos {
     grid-area: payment-logos;
     display: flex;
+    width: 100%;
     height: 100px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+#vipps,
+#klarna,
+#apple,
+#credit-card {
+    display: flex;
     object-fit: contain;
+    padding: 10px;
 }
 
 .credit-flex {
@@ -257,6 +267,7 @@ body {
 
 .address-div {
     grid-area: address;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,18 +309,37 @@ body {
     background: transparent;
     height: 30px;
     padding-left: 16px;
+    width: 100%;
+}
+
+#name,
+#last-name,
+#card-number,
+#expiry,
+#cvv,
+#phone,
+#address,
+#city,
+#country,
+#zip:focus {
+    outline: none;
 }
 
 .radio-container-1 {
     grid-area: radio-1;
+    padding-top: 20px;
 }
 
 .radio-container-2 {
     grid-area: radio-2;
 }
 
-.button-container {
+.buttons-container {
     grid-area: buttons;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
 }
 
 .back-btn,
@@ -326,13 +356,18 @@ body {
     cursor: pointer;
 }
 
+.back-btn:hover,
+.submit:hover {
+    box-shadow: 0 0 15px aqua;
+}
+
 .footer {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     width: 100vw;
     height: 200px;
     background-color: #2D2D2C;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .first-row-links {
