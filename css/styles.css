@@ -128,8 +128,6 @@ body {
 
 .nav-menu li:first-child {
     text-decoration: underline;
-    pointer-events: none;
-    cursor: not-allowed;
 }
 
 .account-menu i:hover {
@@ -268,7 +266,7 @@ body {
 .posters-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 210px);
     overflow: hidden;
     align-content: center;
 }
@@ -301,6 +299,21 @@ body {
     top: -10px;
 }
 
+.caret-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.caret-right a {
+    font-size: 8rem;
+    font-family: "Montserrat", "sans-serif";
+}
+
 .filmmaker-container {
     display: flex;
     align-items: center;
@@ -322,7 +335,7 @@ body {
 .directors {
     display: grid;
     overflow: hidden;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     grid-template-rows: 200px 100px 20px 120px;
     grid-template-areas:
         'daniel         karol          katie'
@@ -420,12 +433,15 @@ body {
     width: 100%;
     font-family: "Montserrat", "sans-serif";
     font-size: 1rem;
+    padding-left: 50px;
+    overflow: visible;
+    text-wrap: nowrap;
 }
 
 .read a {
     display: flex;
-    width: 200px;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content: center;
     font-family: "Montserrat", "sans-serif";
     font-size: 1rem;
     padding-right: 16px;
@@ -571,7 +587,6 @@ body {
 
     .nav-menu li:first-child {
         text-decoration: none;
-        cursor: not-allowed;
         background: url("assets/box-active.png") center/cover no-repeat;
     }
 
@@ -579,14 +594,6 @@ body {
         background-image: url("assets/box-hover.png");
         color: white;
     }
-}
-
-.banner-2 {
-    margin-top: 40px;
-}
-
-.banner-3 {
-    margin-top: 40px;
 }
 
 @media (min-width: 960px) {
@@ -608,6 +615,14 @@ body {
     .banner-2-text p,
     .banner-3-text p {
         font-size: 1.5rem;
+    }
+
+    .banner-2 {
+        margin-top: 40px;
+    }
+
+    .banner-3 {
+        margin-top: 40px;
     }
 }
 
@@ -666,4 +681,7 @@ body {
         object-position: 0 -126px;
     }
 
+    .posters-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }

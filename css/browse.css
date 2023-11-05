@@ -384,7 +384,7 @@ body {
 .posters-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 210px);
     overflow: hidden;
     align-content: center;
     background-color: rgba(45, 45, 44, 0.4);
@@ -424,6 +424,23 @@ body {
     justify-content: center;
     font-size: 2rem;
     padding: 40px;
+}
+
+.caret-right-1,
+.caret-right-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.caret-right-1 a,
+.caret-right-2 a {
+    font-size: 8rem;
+    font-family: "Montserrat", "sans-serif";
 }
 
 .back-to-top {
@@ -584,5 +601,9 @@ body {
     .nav-menu a {
         height: 60px;
         width: 120px;
+    }
+
+    .posters-grid {
+        grid-template-columns: repeat(6, 1fr);
     }
 }

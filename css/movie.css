@@ -132,17 +132,41 @@ body {
     color: aqua;
 }
 
-.movie-detail {
+.main-content {
     display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
     position: relative;
-    top: 150px;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 50px 2fr 0.5fr 1fr;
+    top: 120px;
     grid-template-areas:
-    'back            back'
-    'player          desc'
-    'cast-header     buttons'
-    'cast            empty'
+    'movie-detail'
+    'cast-block'
+    'movies-row'
+    'back-to-top'
+    'footer';
+}
+
+.movie-detail {
+    grid-area: movie-detail;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr 100px;
+    grid-template-areas:
+    'back        back'
+    'player      player'
+    'desc        desc'
+    'buttons     buttons'
+}
+
+.cast-block {
+    grid-area: cast-block;
+    display: block;
+}
+
+.movies-row {
+    grid-area: movies-row;
 }
 
 #back {
@@ -153,18 +177,22 @@ body {
     padding-left: 20px;
 }
 
-#player {
+.player {
     grid-area: player;
     width: 100%;
     height: auto;
     padding: 24px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: grid;
     width: 100%;
-    padding-right: 20px;
+    height: 100%;
+    padding: 20px;
     grid-template-columns: 2fr 3fr 1fr;
     grid-template-rows: 80px 60px 120px auto;
     grid-template-areas:
@@ -174,10 +202,16 @@ body {
     'text           text        text'
 }
 
-#title {
+.title-container {
     grid-area: title;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    height: auto;
+    width: 80%;
     object-fit: contain;
 }
 
@@ -248,6 +282,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.3fr 1fr;
     grid-template-rows: 50px 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-template-areas:
     'add   add   buy'
     'rate  rate  buy';
@@ -325,6 +361,57 @@ body {
     color: aqua;
 }
 
+.cast-container {
+    display: grid;
+    position: relative;
+    top: 170px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 200px;
+    grid-template-areas:
+    'cast-header cast-header'
+    'cast cast';
+}
+
+.cast-header {
+    grid-area: cast-header;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.cast-grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 50px;
+}
+
+.cast-pic {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 24px;
+    object-fit: contain;
+}
+
+.see-more {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .more-like-this {
     display: flex;
     width: 100%;
@@ -337,7 +424,7 @@ body {
 .posters-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 210px);
     overflow: hidden;
     align-content: center;
     background-color: rgba(45, 45, 44, 0.4);
@@ -356,6 +443,21 @@ body {
     padding: 30px;
     overflow: hidden;
     cursor: pointer;
+}
+
+.caret-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.caret-right a {
+    font-size: 8rem;
+    font-family: "Montserrat", "sans-serif";
 }
 
 .poster {
@@ -455,7 +557,6 @@ body {
     color: aqua;
 }
 
-
 @media (min-width: 786px) {
 
     .header {
@@ -499,6 +600,16 @@ body {
         background-image: url("assets/box-hover.png");
         color: white;
     }
+
+
+    .movie-detail {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50px 2fr 0.5fr;
+        grid-template-areas:
+    'back            back'
+    'player          desc'
+    'player          buttons'
+    }
 }
 
 @media (min-width: 1024px) {
@@ -538,5 +649,9 @@ body {
     .nav-menu a {
         height: 60px;
         width: 120px;
+    }
+
+    .posters-grid {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
