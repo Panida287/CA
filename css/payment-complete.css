@@ -1,0 +1,345 @@
+* {
+    font-family: "orbitron", sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    overflow: auto;
+}
+
+root {
+    --text-color: white;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.19) 0%, rgba(0, 255, 255, 0.00) 14.06%, rgba(0, 255, 255, 0.00) 85.42%, rgba(0, 255, 255, 0.19) 100%), #121212;
+);
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header-background {
+    background: linear-gradient(180deg, #000 22.92%, rgba(0, 0, 0, 0.69) 51.56%, rgba(0, 0, 0, 0.54) 67.19%, rgba(0, 0, 0, 0.39) 83.85%, rgba(0, 0, 0, 0.00) 100%);
+    width: 100vw;
+    height: 126px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.account-menu span {
+    display: none;
+}
+
+.header {
+    z-index: 3;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: grid;
+    grid-template-rows: 40px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'logo       slogan        empty'
+    'logo       nav-menu      account-menu';
+}
+
+.slogan {
+    grid-area: slogan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    font-family: "Rajdhani", "sans-serif";
+}
+
+.logo {
+    height: 71px;
+    width: 108px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo-header {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-menu {
+    grid-area: account-menu;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#log-in:hover i,
+#log-in:hover span {
+    color: aqua;
+}
+
+#cart:hover i,
+#cart:hover span {
+    color: aqua;
+}
+
+#wishlist:hover i,
+#wishlist:hover span {
+    color: aqua;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkout-header {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 40px 30px 40px;
+    grid-template-areas:
+    'checkout checkout checkout'
+    'back progress-bar empty'
+    'back progress-des empty';
+}
+
+.header-text {
+    grid-area: checkout;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+}
+
+.back {
+    grid-area: back;
+    display: flex;
+    height: 100%;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.back a:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.progress-bar {
+    grid-area: progress-bar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 28px;
+}
+
+.circle {
+    height: 15px;
+    width: 35px;
+    border-radius: 50%;
+    background: aqua;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background: aqua;
+}
+
+.progress-des {
+    grid-area: progress-des;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-des p {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    overflow: visible;
+}
+
+.payment-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.payment-complete-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    width: 100%;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+.success {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.success h1 {
+    font-size: 2rem;
+}
+
+.success-icon-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-icon {
+    width: 300px;
+    height: auto;
+}
+
+.success-msg {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-msg p {
+    width: 40%;
+    text-align: center;
+    font-family: "Montserrat", "sans-serif";
+    line-height: 2rem;
+}
+
+.watch-button-container {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+    padding: 20px;
+}
+
+.watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50px;
+    height: 30px;
+    width: 100px;
+}
+
+.watch:hover {
+    box-shadow: 0 0 15px aqua;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: 100vw;
+    height: 200px;
+    background-color: #2D2D2C;
+    margin-top: 20px;
+}
+
+.first-row-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.second-row-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.first-row-links a:hover, .second-row-links a:hover {
+    color: aqua;
+}
+
+
+/*medium*/
+@media (min-width: 786px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+        'slogan slogan slogan'
+        'logo nav-menu account-menu'
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .header {
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas:
+            'slogan slogan slogan'
+            'logo nav-menu account-menu'
+    }
+
+    .account-menu {
+        display: flex;
+    }
+
+    .account-menu span {
+        display: inline-block;
+        padding-left: 4px;
+    }
+
+    .account-menu i {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        grid-template-columns: 1fr 2fr 400px;
+    }
+
+    .account-menu {
+        margin-right: 40px;
+    }
+}
