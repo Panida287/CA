@@ -253,8 +253,11 @@
     grid-area: buttons;
     display: flex;
     width: 100%;
-    padding: 20px;
     justify-content: space-between;
+}
+
+.buttons-container a {
+    padding: 20px;
 }
 
 .back-btn,
