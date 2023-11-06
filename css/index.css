@@ -1,0 +1,438 @@
+.nav-menu li:first-child {
+    text-decoration: underline;
+}
+
+.contents {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    top: 0;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 300px 300px;
+    grid-template-areas:
+        'no-sub         no-sub'
+        'display        display'
+        'share          share';
+}
+
+#banner-1-image {
+    grid-area: no-sub;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: 0 -26px;
+}
+
+.banner-1-text {
+    grid-area: no-sub;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+}
+
+.banner-1-text h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.banner-paragraph {
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+}
+
+.banner-1-text p {
+    text-align: center;
+}
+
+.banner-2 {
+    grid-area: display;
+    display: flex;
+}
+
+#banner-2-image {
+    object-fit: contain;
+    width: 60%;
+    height: auto;
+    margin-left: 40px;
+}
+
+.banner-2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    text-align: end;
+    margin: 0 40px 0 0;
+}
+
+.banner-2-text h2 {
+    font-size: 2rem;
+    padding-bottom: 32px;
+}
+
+.banner-3 {
+    grid-area: share;
+    height: 300px;
+    display: flex;
+    position: relative;
+}
+
+.banner-3-text {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.banner-3-text h2 {
+    font-size: 2rem;
+    padding-bottom: 32px;
+}
+
+.banner-3-text p {
+    text-wrap: none;
+}
+
+#banner-3-image {
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.carousel-header h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.browse {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.browse:hover {
+    color: aqua;
+}
+
+.posters-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 210px);
+    overflow: hidden;
+    align-content: center;
+}
+
+.movie-container  {
+    display: flex;
+    height: 300px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.movie-container a {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.poster {
+    position: relative;
+    height: 250px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.poster:hover {
+    border: 1px solid white;
+    box-shadow: 0 0 15px aqua;
+    top: -10px;
+}
+
+.caret-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.caret-right a {
+    font-size: 8rem;
+    font-family: "Montserrat", "sans-serif";
+}
+
+.filmmaker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.filmmaker-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filmmaker-header h2 {
+    font-size: 2rem;
+}
+
+.directors {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 200px 100px 20px 120px;
+    grid-template-areas:
+        'daniel         karol          katie'
+        'article-1      article-2      article-3'
+        'read1          read2          read31'
+        'see-more       see-more       see-more'
+}
+
+#daniel {
+    grid-area: daniel;
+    background-image: url("assets/images/actors-directors/filmmaker1.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+
+}
+
+#karol {
+    grid-area: karol;
+    background-image: url("assets/images/actors-directors/filmmaker2.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+}
+
+#katie {
+    grid-area: katie;
+    background-image: url("assets/images/actors-directors/filmmaker3.png");
+    background-clip: padding-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 8px 8px 8px;
+}
+
+#daniel:hover {
+    background-image: url("assets/images/movie-posters/makerfilm1.png");
+}
+
+#karol:hover {
+    background-image: url("assets/images/movie-posters/makerfilm2.png");
+}
+
+#katie:hover {
+    background-image: url("assets/images/movie-posters/makerfilm3.png");
+}
+
+#article-1 {
+    grid-area: article-1;
+}
+
+#article-2 {
+    grid-area: article-2;
+}
+
+#article-3 {
+    grid-area: article-3;
+}
+
+#article-1,
+#article-2,
+#article-3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-indent: 20px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    padding: 16px;
+}
+
+#article-1 p,
+#article-2 p,
+#article-3 p {
+    width: 200px;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+}
+
+.read {
+    display: flex;
+    width: 100%;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    padding-left: 50px;
+    overflow: visible;
+    text-wrap: nowrap;
+}
+
+.read a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1rem;
+    padding-right: 16px;
+}
+
+.button-container {
+    grid-area: see-more;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    padding-top: 40px;
+}
+
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+}
+
+.see-more:hover {
+    border: 3px solid white;
+    box-shadow: 0 0 15px aqua;
+    cursor: pointer;
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top-icon i {
+    font-size: 3rem;
+    border: 2px solid white;
+    border-radius: 99px;
+    padding: 10px 16px 10px 16px;
+}
+
+.back-to-top-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 100px;
+    width: 100px;
+}
+
+#back-to-top-text {
+    font-size: 2rem;
+}
+
+.back-to-top-icon:hover i {
+    box-shadow: 0 0 15px aqua;
+}
+
+#back-to-top-text:hover {
+    color: aqua;
+}
+
+@media (min-width: 786px) {
+    .nav-menu li:nth-child(1) {
+        text-decoration: none;
+        background: url("assets/box-active.png") center/cover no-repeat;
+    }
+}
+
+@media (min-width: 960px) {
+    #banner-1-image {
+        grid-area: no-sub;
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        object-position: 0 -26px;
+    }
+
+    .banner-1-text h1,
+    .banner-2-text h2,
+    .banner-3-text h2 {
+        font-size: 3rem;
+    }
+
+    .banner-1-text p,
+    .banner-2-text p,
+    .banner-3-text p {
+        font-size: 1.5rem;
+    }
+
+    .banner-2 {
+        margin-top: 40px;
+    }
+
+    .banner-3 {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner-2-text {
+        padding-right: 120px;
+    }
+
+    .banner-3-text {
+        padding-left: 120px;
+    }
+
+    #banner-1-image {
+        grid-area: no-sub;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: 0 -126px;
+    }
+
+    .posters-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
