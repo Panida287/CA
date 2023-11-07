@@ -128,7 +128,14 @@
     padding-right: 20px;
 }
 
-.browse:hover {
+.browse a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.browse a:hover {
     color: aqua;
 }
 
