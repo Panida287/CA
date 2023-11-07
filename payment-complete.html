@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
+  <meta name="description" content="Watch your favourite movies without guilt of subscription"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Eyes</title>
   <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
@@ -15,13 +15,13 @@
   <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body aria-label="Square Eyes - Payment Success">
 <span id="header-background"></span>
-<header class="header">
+<header class="header" aria-label="Header">
   <p class="slogan">Connecting film lovers</p>
   <div id="logo-header">
-    <a href="index.html">
-      <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+    <a href="index.html" aria-label="Click to go home">
+      <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
     </a>
   </div>
   <div class="account-menu">
@@ -48,7 +48,7 @@
       </h1>
     </div>
     <div class="back">
-      <a href="browse.html">
+      <a href="browse.html" aria-label="Go back to browse">
         < Back to browse
       </a>
     </div>
@@ -87,13 +87,15 @@
         </p>
       </div>
       <div class="watch-button-container">
-        <button type="button" class="watch">
-          Watch now
-        </button>
+        <a href="movie.html" aria-label="Watch the movie now">
+          <button type="button" class="watch">
+            Watch now
+          </button>
+        </a>
       </div>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" aria-label="Footer">
     <div class="first-row-links">
       <a href="#">
         About us
@@ -129,10 +131,11 @@
       </a>
     </div>
     <div class="logo-footer">
-      <a href="index.html">
-        <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+      <a href="index.html" aria-label="Click to go home">
+        <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
       </a>
     </div>
   </footer>
 </div>
 </body>
+</html>

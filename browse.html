@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
+    <meta name="description" content="Watch your favorite movies without the guilt of subscription."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Square Eyes</title>
     <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
@@ -16,22 +15,22 @@
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body aria-label="Square Eyes - Browse">
 <span id="header-background"></span>
-<header class="header">
+<header class="header" aria-label="Header">
     <p class="slogan">Connecting film lovers</p>
     <div id="logo-header">
-        <a href="index.html">
-            <img class="logo" aria-label="logo, click to go home" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+        <a href="index.html" aria-label="Click to go home">
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
         </a>
     </div>
     <div class="nav">
         <input type="checkbox" id="menu-checkbox"/>
-        <label for="menu-checkbox" id="menu-label">
-                <span class="caret-icon">
-                    Menu
-                    <i class="fa-solid fa-caret-down"></i>
-                </span>
+        <label for="menu-checkbox" id="menu-label" aria-label="Toggle Menu">
+            <span class="caret-icon">
+                Menu
+                <i class="fa-solid fa-caret-down"></i>
+            </span>
         </label>
         <ul class="nav-menu">
             <li>
@@ -50,25 +49,25 @@
     </div>
     <div class="account-menu">
         <a href="#" id="log-in">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-label="click to log in or sign up"></i>
             <span>Login / Sign up</span>
         </a>
         <a href="cart.html" id="cart">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping" aria-label="click to see cart"></i>
             <span>0 item(s)</span>
         </a>
         <a href="#" id="wishlist">
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart" aria-label="click to see wishlist"></i>
             <span>Wishlist</span>
         </a>
     </div>
 </header>
 
-<div class="promo-poster">
+<div class="promo-poster" aria-label="Promo Poster">
     <img alt="new world movie poster" class="banner" src="assets/images/movie-posters/newworld-poster.png" height="688"
          width="1440"/>
 </div>
-<div class="promo-container">
+<div class="promo-container" aria-label="Promo Description">
     <div class="promo-description">
         <img alt="new world" id="promo-title" src="assets/images/newworld.png" height="67" width="437"/>
         <p id="minutes">
@@ -78,24 +77,24 @@
             4K
         </p>
         <p id="newworld-text">
-            After the third extinctions, humankind and robots and exhausted with endless attempts to find new world
+            After the third extinctions, humankind and robots and exhausted with endless attempts to find a new world
         </p>
-        <button type="button" id="watch-trailer">
+        <button type="button" id="watch-trailer" aria-label="Watch Trailer">
             Watch Trailer
         </button>
-        <button type="button" id="buy">
+        <button type="button" id="buy" aria-label="Buy for 99kr">
             Buy for 99kr
         </button>
-        <button type="button" id="add-to-wishlist">
-            + add to wishlist
+        <button type="button" id="add-to-wishlist" aria-label="Add to wishlist">
+            + Add to Wishlist
         </button>
     </div>
 </div>
 
-<div class="browse">
-    <div class="browse-by">
+<div class="browse" aria-label="Browse Options">
+    <div class="browse-by" aria-label="Browse By">
         <input type="checkbox" id="browse-checkbox"/>
-        <label for="browse-checkbox" id="browse-label">
+        <label for="browse-checkbox" id="browse-label" aria-label="Toggle Browse Options">
             <i class="fa-solid fa-arrow-left">
             <span>
                 Browse by
@@ -120,89 +119,89 @@
             </li>
         </ul>
     </div>
-    <div class="search">
+    <div class="search" aria-label="Search">
         <input type="checkbox" id="search-checkbox"/>
-        <label for="search-checkbox" id="search-checkbox-label" aria-label="click to search">
+        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search">
             <i id="search-icon" class="fas fa-search"></i>
         </label>
         <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search..." aria-label="type to search">
+            <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
             <label for="search-bar"></label>
         </div>
     </div>
 </div>
-<div class="movies-row-1">
+<div class="movies-row-1" aria-label="Recommended Movies">
     <h2 class="recommended-header">
         Recommended
     </h2>
     <div class="posters-grid">
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="addams family" src="assets/images/movie-posters/addams.jpeg" height="741"
                      width="500"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="barbie" src="assets/images/movie-posters/barbie.jpg" height="3000" width="2000"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
-                <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741" width="500"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html">
-                <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
-                     width="1280"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html">
-                <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792" width="500"/>
-            </a>
-        </div>
-        <div class="caret-right-1" aria-label="see more movies">
-            <a>
-                >
-            </a>
-        </div>
+        <a href="movie.html" aria-label="View Movie">
+            <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741" width="500"/>
+        </a>
+    </div>
+    <div class="movie-container">
+        <a href="movie.html" aria-label="View Movie">
+            <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
+                 width="1280"/>
+        </a>
+    </div>
+    <div class="movie-container">
+        <a href="movie.html" aria-label="View Movie">
+            <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792" width="500"/>
+        </a>
+    </div>
+    <div class="caret-right-1" aria-label="See more movies">
+        <a>
+            >
+        </a>
     </div>
 </div>
-<div class="movies-row-2">
+</div>
+<div class="movies-row-2" aria-label="New Release Movies">
     <h2 class="new-release-header">
         New Release
     </h2>
     <div class="posters-grid">
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="godzilla" src="assets/images/movie-posters/godzilla.jpeg" height="741"
                      width="500"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="toy story" src="assets/images/movie-posters/toystory.jpeg" height="741" width="500"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="star war" src="assets/images/movie-posters/starwar.jpg" height="1920" width="1280"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
-                <img class="poster" alt="the creater" src="assets/images/movie-posters/thecreater.jpg" height="1920"
+            <a href="movie.html" aria-label="View Movie">
+                <img class="poster" alt="the creator" src="assets/images/movie-posters/thecreater.jpg" height="1920"
                      width="1280"/>
             </a>
         </div>
         <div class="movie-container">
-            <a href="movie.html">
+            <a href="movie.html" aria-label="View Movie">
                 <img class="poster" alt="nowhere" src="assets/images/movie-posters/nowhere.jpg" height="1920" width="1280"/>
             </a>
         </div>
-        <div class="caret-right-2" aria-label="see more movies">
+        <div class="caret-right-2" aria-label="See more movies">
             <a>
                 >
             </a>
@@ -217,7 +216,7 @@
     <a id="back-to-top-text" href="#">BACK TO TOP</a>
 </div>
 
-<footer class="footer">
+<footer class="footer" aria-label="Footer">
     <div class="first-row-links">
         <a href="#">
             About us
@@ -249,11 +248,11 @@
             Partnerships
         </a>
         <a href="#">
-            Copyright 2023 Square eyes
+            Copyright 2023 Square Eyes
         </a>
     </div>
-    <div class="logo-footer" aria-label="logo, click to go home">
-        <a  href="index.html">
+    <div class="logo-footer" aria-label="Click to go home">
+        <a href="index.html">
             <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
         </a>
     </div>

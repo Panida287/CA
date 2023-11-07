@@ -1,162 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Contact Square Eyes with your inquiries and questions. We're here to assist you. Send us a message or check out our FAQ section for answers to common questions."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Square Eyes</title>
-  <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link rel="stylesheet" href="css/contact.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Rajdhani&display=swap"
-        rel="stylesheet">
-  <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <title>Square Eyes</title>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/contact.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Rajdhani&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <span id="header-background"></span>
 <header class="header">
-  <p class="slogan">Connecting film lovers</p>
-  <div id="logo-header">
-    <a href="index.html">
-      <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
-    </a>
-  </div>
-  <div class="nav">
-    <input type="checkbox" id="menu-checkbox"/>
-    <label for="menu-checkbox" id="menu-label">
+    <p class="slogan">Connecting film lovers</p>
+    <div id="logo-header">
+        <a href="index.html">
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+        </a>
+    </div>
+    <div class="nav">
+        <input type="checkbox" id="menu-checkbox"/>
+        <label for="menu-checkbox" id="menu-label">
                 <span class="caret-icon">
                     Menu
                     <i class="fa-solid fa-caret-down"></i>
                 </span>
-    </label>
-    <ul class="nav-menu">
-      <li>
-        <a id="home" href="index.html">Home</a>
-      </li>
-      <li>
-        <a id="browse" href="browse.html">Browse</a>
-      </li>
-      <li>
-        <a id="about" href="about-us.html">About us</a>
-      </li>
-      <li>
-        <a id="contact" href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-  <div class="account-menu">
-    <a href="#" id="log-in">
-      <i class="fa-solid fa-user"></i>
-      <span>Login / Sign up</span>
-    </a>
-    <a href="cart.html">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span>0 item(s)</span>
-    </a>
-    <a href="#">
-      <i class="fa-solid fa-heart"></i>
-      <span>Wishlist</span>
-    </a>
-  </div>
+        </label>
+        <ul class="nav-menu">
+            <li>
+                <a id="home" href="index.html">Home</a>
+            </li>
+            <li>
+                <a id="browse" href="browse.html">Browse</a>
+            </li>
+            <li>
+                <a id="about" href="about-us.html">About us</a>
+            </li>
+            <li>
+                <a id="contact" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-menu">
+        <a href="#" id="log-in">
+            <i class="fa-solid fa-user"></i>
+            <span>Login / Sign up</span>
+        </a>
+        <a href="cart.html" id="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>0 item(s)</span>
+        </a>
+        <a href="#" id="wishlist">
+            <i class="fa-solid fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+    </div>
 </header>
 
 <img id="chat-girl" alt="chat girl" src="assets/images/chat-girl.jpeg" height="989" width="1466"/>
 <div class="contact-us">
-  <h1>CONTACT US</h1>
-  <img id="glow-box" alt="glowing box" src="assets/images/contact-box.png"/>
-  <div class="contact-us-box">
-    <div class="faq-text">
-      <p>
-        Have questions?
-        <br>
-        Don't hesitate to
-        <br>
-        drop us a message
-      </p>
-      <a href="#">FAQ</a>
+    <h1>CONTACT US</h1>
+    <img id="glow-box" alt="glowing box" src="assets/images/contact-box.png"/>
+    <div class="contact-us-box">
+        <div class="faq-text">
+            <p>
+                Have questions?
+                <br>
+                Don't hesitate to
+                <br>
+                drop us a message
+            </p>
+            <a href="#">FAQ</a>
+        </div>
+        <form class="contact-form" name="contact" method="post" data-netlify="true">
+            <div id="name-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div id="email-form">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div id="phone-form">
+                <label for="phone-number">Phone number:</label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+            </div>
+            <div id="msg-box-form">
+                <label for="msg-box">Your message:</label>
+                <input type="text" id="msg-box" name="msg-box" placeholder="Your message here" required>
+            </div>
+        </form>
     </div>
-    <form class="contact-form" name="contact" method="post" data-netlify="true">
-      <div id="name-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </div>
-      <div id="email-form">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <div id="phone-form">
-        <label for="phone-number">Phone number:</label>
-        <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
-      </div>
-      <div id="msg-box-form">
-        <label for="msg-box">Your message:</label>
-        <input type="text" id="msg-box" name="msg-box" placeholder="Your message here" required>
-      </div>
-    </form>
-  </div>
 </div>
 <div class="button-container">
-  <button type="button" id="submit">
-    SUBMIT
-  </button>
+    <button type="button" id="submit">
+        SUBMIT
+    </button>
 </div>
 <div class="location">
-  <p><i class="fa-solid fa-location-dot"></i>
-    Or drop in at Mølleparken 4, 0459 Oslo
-  </p>
+    <p><i class="fa-solid fa-location-dot"></i>
+        Or drop in at Mølleparken 4, 0459 Oslo
+    </p>
 </div>
 
 <div class="back-to-top">
-  <a href="#" class="back-to-top-icon">
-    <i class="fa-solid fa-arrow-up"></i>
-  </a>
-  <a id="back-to-top-text" href="#">BACK TO TOP</a>
+    <a href="#" class="back-to-top-icon">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a id="back-to-top-text" href="#">BACK TO TOP</a>
 </div>
 
 <footer class="footer">
-  <div class="first-row-links">
-    <a href="#">
-      About us
-    </a>
-    <a href="#">
-      Contact us
-    </a>
-    <a href="#">
-      Copyright
-    </a>
-    <a href="#">
-      Help center
-    </a>
-    <a href="#">
-      Privacy policy
-    </a>
-  </div>
-  <div class="second-row-links">
-    <a href="#">
-      Terms of service
-    </a>
-    <a href="#">
-      Advertise with us
-    </a>
-    <a href="#">
-      Feedback and suggestions
-    </a>
-    <a href="#">
-      Partnerships
-    </a>
-    <a href="#">
-      Copyright 2023 Square eyes
-    </a>
-  </div>
-  <div class="logo-footer">
-    <a  href="index.html">
-      <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
-    </a>
-  </div>
+    <div class="first-row-links">
+        <a href="#">
+            About us
+        </a>
+        <a href="#">
+            Contact us
+        </a>
+        <a href="#">
+            Copyright
+        </a>
+        <a href="#">
+            Help center
+        </a>
+        <a href="#">
+            Privacy policy
+        </a>
+    </div>
+    <div class="second-row-links">
+        <a href="#">
+            Terms of service
+        </a>
+        <a href="#">
+            Advertise with us
+        </a>
+        <a href="#">
+            Feedback and suggestions
+        </a>
+        <a href="#">
+            Partnerships
+        </a>
+        <a href="#">
+            Copyright 2023 Square eyes
+        </a>
+    </div>
+    <div class="logo-footer">
+        <a href="index.html">
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+        </a>
+    </div>
 </footer>
 
 </body>

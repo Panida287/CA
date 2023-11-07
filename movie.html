@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="Connecting film lovers" content="Watch your favourite movies without guilt of subscription"/>
+    <meta name="description"
+          content="Explore the details of the movie 'New World.' Find information about its 4K resolution, rating, year, genre, duration, and more. Watch the trailer and add it to your wishlist"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Square Eyes</title>
@@ -16,22 +17,21 @@
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-
+<body aria-label="Square Eyes - Movie Details Page">
 <span id="header-background"></span>
-<header class="header">
+<header class="header" aria-label="Header">
     <p class="slogan">Connecting film lovers</p>
     <div id="logo-header">
-        <a href="index.html">
-            <img class="logo" alt="logo" aria-label="logo, click to go home" src="assets/images/logo.png" height="311" width="463"/>
+        <a href="index.html" aria-label="Click to go home">
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
         </a>
     </div>
     <div class="nav">
-        <input type="checkbox" id="menu-checkbox" aria-label="click to see menu"/>
+        <input type="checkbox" id="menu-checkbox" aria-label="Click to see menu"/>
         <label for="menu-checkbox" id="menu-label">
                 <span class="caret-icon">
                     Menu
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i class="fa-solid fa-caret-down" aria-label="Click to navigate menu"></i>
                 </span>
         </label>
         <ul class="nav-menu">
@@ -51,15 +51,15 @@
     </div>
     <div class="account-menu">
         <a href="#" id="log-in">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user" aria-label="Click to log in or sign up"></i>
             <span>Login / Sign up</span>
         </a>
         <a href="cart.html" id="cart">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping" aria-label="Click to see cart"></i>
             <span>0 item(s)</span>
         </a>
         <a href="#" id="wishlist">
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart" aria-label="Click to see wishlist"></i>
             <span>Wishlist</span>
         </a>
     </div>
@@ -67,7 +67,7 @@
 
 <div class="main-content">
     <div class="movie-detail">
-        <a href="#" id="back">
+        <a href="browse.html" id="back" aria-label="Go back">
             < Back
         </a>
         <div class="player">
@@ -126,18 +126,18 @@
         </div>
         <div class="button-container">
             <div class="button-1">
-                <button type="button" id="add-to-wishlist" aria-label="click to add to wishlist">
+                <button type="button" id="add-to-wishlist" aria-label="Click to add to wishlist">
                     + add to wishlist
                 </button>
             </div>
             <div class="button-2">
-                <button type="button" id="rate-movie" aria-label="click to rate movie">
-                    <i class="fa-regular fa-thumbs-up"></i>
+                <button type="button" id="rate-movie" aria-label="Click to rate movie">
+                    <i class="fa-regular fa-thumbs-up" aria-label="Thumbs up"></i>
                     Rate this movie
                 </button>
             </div>
             <div class="button-3">
-                <button type="button" id="buy" aria-label="click to buy">
+                <button type="button" id="buy" aria-label="Click to buy">
                     Buy for 99kr
                 </button>
             </div>
@@ -161,105 +161,106 @@
                 </div>
             </div>
             <div class="cast-and-name">
-                <div class="cast">
-                    <img alt="john doe-2" class="cast-pic" src="assets/images/actors-directors/john-doe-2.jpeg"
-                         width="1024" height="1024"/>
-                </div>
-                <div class="name">
-                    <p>
-                        John Doe
-                    </p>
-                </div>
+            <div class="cast">
+                <img alt="john doe-2" class="cast-pic" src="assets/images/actors-directors/john-doe-2.jpeg"
+                     width="1024" height="1024"/>
             </div>
-            <div class="cast-and-name">
-                <div class="cast">
-                    <img alt="john doe-3" class="cast-pic" src="assets/images/actors-directors/john-doe-3.jpeg"
-                         width="1024" height="1024"/>
-                </div>
-                <div class="name">
-                    <p>
-                        John Doe
-                    </p>
-                </div>
-            </div>
-            <div class="cast-and-name">
-                <div class="cast">
-                    <img alt="jane doe" class="cast-pic" src="assets/images/actors-directors/jane-doe-1.jpeg"
-                         width="1018" height="1018"/>
-                </div>
-                <div class="name">
-                    <p>
-                        Jane Doe
-                    </p>
-                </div>
-            </div>
-            <div class="cast-and-name">
-                <div class="cast">
-                    <img alt="john doe-2" class="cast-pic" src="assets/images/actors-directors/jane-doe-2.jpeg"
-                         width="1018" height="1018"/>
-                </div>
-                <div class="name">
-                    <p>
-                        Jane Doe
-                    </p>
-                </div>
-            </div>
-            <div class="see-more" aria-label="click to see more casts">
+            <div class="name">
                 <p>
-                    See more >
+                    John Doe
                 </p>
             </div>
         </div>
-    </div>
-
-    <div class="movies-row">
-        <h2 class="more-like-this">
-            More like this
-        </h2>
-        <div class="posters-grid">
-            <div class="movie-container">
-                <a href="movie.html">
-                    <img class="poster" alt="addams family" src="assets/images/movie-posters/addams.jpeg" height="741"
-                         width="500"/>
-                </a>
+        <div class="cast-and-name">
+            <div class="cast">
+                <img alt="john doe-3" class="cast-pic" src="assets/images/actors-directors/john-doe-3.jpeg"
+                     width="1024" height="1024"/>
             </div>
-            <div class="movie-container">
-                <a href="movie.html">
-                    <img class="poster" alt="barbie" src="assets/images/movie-posters/barbie.jpg" height="3000"
-                         width="2000"/>
-                </a>
-            </div>
-            <div class="movie-container">
-                <a href="movie.html">
-                    <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741"
-                         width="500"/>
-                </a>
-            </div>
-            <div class="movie-container">
-                <a href="movie.html">
-                    <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
-                         width="1280"/>
-                </a>
-            </div>
-            <div class="movie-container">
-                <a href="movie.html">
-                    <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792"
-                         width="500"/>
-                </a>
-            </div>
-            <div class="caret-right">
-                <a>
-                    >
-                </a>
+            <div class="name">
+                <p>
+                    John Doe
+                </p>
             </div>
         </div>
+        <div class="cast-and-name">
+            <div class="cast">
+                <img alt="jane doe" class="cast-pic" src="assets/images/actors-directors/jane-doe-1.jpeg"
+                     width="1018" height="1018"/>
+            </div>
+            <div class="name">
+                <p>
+                    Jane Doe
+                </p>
+            </div>
+        </div>
+        <div class="cast-and-name">
+            <div class="cast">
+                <img alt="john doe-2" class="cast-pic" src="assets/images/actors-directors/jane-doe-2.jpeg"
+                     width="1018" height="1018"/>
+            </div>
+            <div class="name">
+                <p>
+                    Jane Doe
+                </p>
+            </div>
+        </div>
+        <div class="see-more" aria-label="Click to see more casts">
+            <p>
+                See more >
+            </p>
+        </div>
     </div>
-    <div class="back-to-top">
-        <a href="#" class="back-to-top-icon">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-        <a id="back-to-top-text" href="#">BACK TO TOP</a>
+</div>
+
+<div class="movies-row">
+    <h2 class="more-like-this">
+        More like this
+    </h2>
+    <div class="posters-grid">
+        <div class="movie-container">
+            <a href="movie.html">
+                <img class="poster" alt="addams family" src="assets/images/movie-posters/addams.jpeg" height="741"
+                     width="500"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a href="movie.html">
+                <img class="poster" alt="barbie" src="assets/images/movie-posters/barbie.jpg" height="3000"
+                     width="2000"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a href="movie.html">
+                <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741"
+                     width="500"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a href="movie.html">
+                <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
+                     width="1280"/>
+            </a>
+        </div>
+        <div class="movie-container">
+            <a href="movie.html">
+                <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792"
+                     width="500"/>
+            </a>
+        </div>
+        <div class="caret-right">
+            <a>
+                >
+            </a>
+        </div>
     </div>
+</div>
+</div>
+<div class="back-to-top">
+    <a href="#" class="back-to-top-icon">
+        <i class="fa-solid fa-arrow-up" aria-label="Click to go back to top"></i>
+    </a>
+    <a id="back-to-top-text" href="#">BACK TO TOP</a>
+</div>
 <footer class="footer">
     <div class="first-row-links">
         <a href="#">
@@ -296,13 +297,11 @@
         </a>
     </div>
     <div class="logo-footer">
-        <a href="index.html">
-            <img class="logo" alt="logo" aria-label="logo, click to go home" src="assets/images/logo.png" height="311" width="463"/>
+        <a href="index.html" aria-label="Click to go home">
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
         </a>
     </div>
 </footer>
-</div>
-
 </body>
 
 </html>

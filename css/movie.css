@@ -48,6 +48,10 @@
     padding-left: 20px;
 }
 
+#back:hover {
+    color: aqua;
+}
+
 .player {
     grid-area: player;
     width: 100%;
