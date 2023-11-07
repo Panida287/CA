@@ -1,4 +1,4 @@
-# CA-GameHub
+# CA-Square Eyes
 Course assignment for HTML and CSS course for Frontend Development at Noroff School of Technology and Digital Media.
 
 ## About:
@@ -21,7 +21,7 @@ Added alt text to every image for better accessibility.
 Tried to make the links as clear as possible.
 
 ## Features
-The page is deployed at Netlify [here]([https://preeminent-madeleine-86cefd.netlify.app/](https://panidas-ca.netlify.app/)).
+The page is deployed at Netlify : https://panidas-ca.netlify.app/
 
 The page consists of 8 pages:
   * Home
