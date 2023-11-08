@@ -347,8 +347,8 @@
 }
 
 .see-more:hover {
-    border: 3px solid white;
-    box-shadow: 0 0 15px aqua;
+    border: 2px solid white;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
     cursor: pointer;
 }
 
@@ -380,7 +380,7 @@
 }
 
 .back-to-top-icon:hover i {
-    box-shadow: 0 0 15px aqua;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
 }
 
 #back-to-top-text:hover {
