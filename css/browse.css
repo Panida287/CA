@@ -107,11 +107,13 @@
 }
 
 #watch-trailer:hover {
-    box-shadow: 0 0 15px aqua;
+    border: 2px solid white;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
 }
 
 #buy:hover {
-    box-shadow: 0 0 15px aqua;
+    border: 2px solid white;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
 }
 
 #add-to-wishlist:hover {

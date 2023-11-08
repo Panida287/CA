@@ -352,41 +352,6 @@
     cursor: pointer;
 }
 
-.back-to-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.back-to-top-icon i {
-    font-size: 3rem;
-    border: 2px solid white;
-    border-radius: 99px;
-    padding: 10px 16px 10px 16px;
-}
-
-.back-to-top-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    height: 100px;
-    width: 100px;
-}
-
-#back-to-top-text {
-    font-size: 2rem;
-}
-
-.back-to-top-icon:hover i {
-    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
-}
-
-#back-to-top-text:hover {
-    color: aqua;
-}
-
 @media (min-width: 786px) {
     .nav-menu li:nth-child(1) {
         text-decoration: none;
