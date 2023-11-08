@@ -131,6 +131,7 @@ body {
 #log-in:hover i,
 #log-in:hover span {
     color: aqua;
+    text-shadow:  0 0 15px aqua;
 }
 
 #cart:hover i,
@@ -155,6 +156,7 @@ body {
     border: 2px solid white;
     border-radius: 99px;
     padding: 10px 16px 10px 16px;
+    transition: 100ms;
 }
 
 .back-to-top-icon {
@@ -164,6 +166,7 @@ body {
     font-size: 2rem;
     height: 100px;
     width: 100px;
+    transition: 100ms;
 }
 
 #back-to-top-text {
@@ -250,6 +253,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 120ms ease-in;
     }
 
     .nav-menu li a:hover {

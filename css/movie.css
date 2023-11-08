@@ -217,6 +217,7 @@
     height: 40px;
     width: 140px;
     cursor: pointer;
+    transition: 100ms;
 }
 
 .button-container {

@@ -168,10 +168,12 @@
     width: 140px;
     margin-top: 16px;
     cursor: pointer;
+    transition: 100ms;
 }
 
 #submit:hover {
-    box-shadow: 0 0 15px aqua;
+    border: 2px solid white;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
 }
 
 @media (min-width: 786px) {
