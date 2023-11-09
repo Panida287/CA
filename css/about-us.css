@@ -71,7 +71,7 @@
     grid-area: our-mission;
     padding-left: 40px;
     width: 90%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .our-mission-text {
