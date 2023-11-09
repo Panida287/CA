@@ -131,7 +131,6 @@ body {
 #log-in:hover i,
 #log-in:hover span {
     color: aqua;
-    text-shadow:  0 0 15px aqua;
 }
 
 #cart:hover i,
