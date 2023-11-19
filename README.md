@@ -2,9 +2,11 @@ CA-Square Eyes
 Course assignment for HTML and CSS course for Frontend Development at Noroff School of Technology and Digital Media.
 
 About:
+
 This course assignment is made from figma design of video streaming service called Square Eyes which I handed in as my assignment for Design course.
 
 Requirements:
+
 1.Responsive
 The website is responsive across screen sizes
 The website works on major browsers and across major device
