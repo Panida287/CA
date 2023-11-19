@@ -8,6 +8,7 @@ Requirements:
 1.Responsive
 The website is responsive across screen sizes
 The website works on major browsers and across major device
+
 2.Bug-free, neat and well written code
 Each page has a unique title
 Each page has a unique meta description
@@ -17,10 +18,12 @@ No unnecessary inline stylin
 The CSS follows DRY principle
 The HTML and CSS are formatted neatly
 Images are below 200kb to ensure faster loading time
+
 3.Appeal of website and ease of navigation
 The website has no broken links
 Navigation between pages is clear
 The website appeals to the target audience
+
 4.WCAG friendly
 Images have alt text
 Anchor tags are used to link pages together
