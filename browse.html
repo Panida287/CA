@@ -14,6 +14,7 @@
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
     <script src="js/browse.js" defer></script>
+    <script src="js/search.js" defer></script>
 </head>
 
 <body aria-label="Square Eyes - Browse">
@@ -122,8 +123,8 @@
     </div>
     <div class="search" aria-label="Search">
         <input type="checkbox" id="search-checkbox"/>
-        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search">
-            <i id="search-icon" class="fas fa-search"></i>
+        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search" onkeyup="search()">
+            Search <i id="search-icon" class="fas fa-search"></i>
         </label>
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
@@ -131,6 +132,7 @@
         </div>
     </div>
 </div>
+<div id="result-container"></div>
 <div class="movies-row-1" aria-label="Recommended Movies">
     <h2 class="recommended-header">
         Recommended

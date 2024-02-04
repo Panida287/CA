@@ -229,10 +229,18 @@
 #search-bar {
     margin-left: 8px;
     border-radius: 16px;
+    color: #2D2D2C;
+}
+
+#search-icon,
+#search-checkbox-label {
+    cursor: pointer;
 }
 
 #search-icon {
-    cursor: pointer;
+    position: relative;
+    top: 2px;
+    padding-left: 2px;
 }
 
 #search-checkbox:checked ~ .search-container {
