@@ -4,8 +4,8 @@ const container1 = document.querySelector(".posters-grid-1");
 const container2 = document.querySelector(".posters-grid-2");
 
 fetch(squareEyesAPI)
-    .then(function (HTTPresponse){
-        return HTTPresponse.json()
+    .then(function (HTTPResponse){
+        return HTTPResponse.json()
     })
     .then(function(apiResult) {
         const apiArray = apiResult;
