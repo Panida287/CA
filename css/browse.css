@@ -128,7 +128,7 @@
     grid-template-rows: 500px;
     padding-left: 20px;
     padding-top: 20px;
-    height: 100px;
+    height: 160px;
     padding-right: 20px;
     width: 100%;
     overflow: hidden;
@@ -164,7 +164,7 @@
     gap: 4px;
 }
 
-.browse-by ul {
+.filter-btn-container {
     display: flex;
     position: absolute;
     align-items: center;
@@ -176,7 +176,8 @@
     z-index: 5;
 }
 
-.browse-by a {
+.filter-btn {
+    border: none;
     display: flex;
     height: 50px;
     width: 100px;
@@ -185,11 +186,11 @@
     background: url("assets/box.png") center/cover no-repeat;
 }
 
-.browse-by a:hover {
+.filter-btn:hover {
     background: url("assets/box-hover.png") center/cover no-repeat;
 }
 
-#browse-checkbox:checked ~ ul {
+#browse-checkbox:checked ~ .filter-btn-container {
     left: 30px;
 }
 
