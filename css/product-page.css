@@ -1,0 +1,56 @@
+.header {
+    position: relative;
+}
+
+.movie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.description-text {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.description-text p {
+
+    font-family: "Rajdhani", "sans-serif";
+    font-size: 1.5rem;
+}
+
+.add-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.add-to-cart-btn:hover {
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
+    border: 2px solid white;
+}
+
+.button-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
