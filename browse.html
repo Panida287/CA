@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Rajdhani&display=swap"
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <script src="js/browse.js" defer></script>
+    <script src="js/shopping-cart.js" defer></script>
 </head>
 
 <body aria-label="Square Eyes - Browse">
@@ -54,7 +56,7 @@
         </a>
         <a href="cart.html" id="cart">
             <i class="fa-solid fa-cart-shopping" aria-label="click to see cart"></i>
-            <span>0 item(s)</span>
+            <span id="cart-amount">Cart</span>
         </a>
         <a href="#" id="wishlist">
             <i class="fa-solid fa-heart" aria-label="click to see wishlist"></i>
@@ -97,32 +99,29 @@
         <label for="browse-checkbox" id="browse-label" aria-label="Toggle Browse Options">
             <i class="fa-solid fa-arrow-left">
             <span>
-                Browse by
+                Genre
             </span>
             </i>
         </label>
-        <ul>
-            <li>
-                <a class="hidden-menu">
-                    Genre
-                </a>
-            </li>
-            <li>
-                <a class="hidden-menu">
-                    Rating
-                </a>
-            </li>
-            <li>
-                <a class="hidden-menu">
-                    Director
-                </a>
-            </li>
-        </ul>
+        <div class="filter-btn-container">
+            <button class="filter-btn" id="action-button">
+                Action
+            </button>
+            <button class="filter-btn" id="drama-button">
+                Drama
+            </button>
+            <button class="filter-btn" id="comedy-button">
+                Comedy
+            </button>
+            <button class="filter-btn" id="view-all-button">
+                View all
+            </button>
+        </div>
     </div>
     <div class="search" aria-label="Search">
         <input type="checkbox" id="search-checkbox"/>
-        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search">
-            <i id="search-icon" class="fas fa-search"></i>
+        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search" onkeyup="search()">
+            Search <i id="search-icon" class="fas fa-search"></i>
         </label>
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
@@ -130,84 +129,10 @@
         </div>
     </div>
 </div>
-<div class="movies-row-1" aria-label="Recommended Movies">
-    <h2 class="recommended-header">
-        Recommended
-    </h2>
-    <div class="posters-grid">
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="addams family" src="assets/images/movie-posters/addams.jpeg" height="741"
-                     width="500"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="barbie" src="assets/images/movie-posters/barbie.jpg" height="3000" width="2000"/>
-            </a>
-        </div>
-        <div class="movie-container">
-        <a href="movie.html" aria-label="View Movie">
-            <img class="poster" alt="batman" src="assets/images/movie-posters/batman.jpeg" height="741" width="500"/>
-        </a>
-    </div>
-    <div class="movie-container">
-        <a href="movie.html" aria-label="View Movie">
-            <img class="poster" alt="blue beetle" src="assets/images/movie-posters/bluebeetle.jpg" height="1920"
-                 width="1280"/>
-        </a>
-    </div>
-    <div class="movie-container">
-        <a href="movie.html" aria-label="View Movie">
-            <img class="poster" alt="the fast" src="assets/images/movie-posters/fast.jpeg" height="792" width="500"/>
-        </a>
-    </div>
-    <div class="caret-right-1" aria-label="See more movies">
-        <a>
-            >
-        </a>
-    </div>
+<div id="header">
+    All Movies
 </div>
-</div>
-<div class="movies-row-2" aria-label="New Release Movies">
-    <h2 class="new-release-header">
-        New Release
-    </h2>
-    <div class="posters-grid">
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="godzilla" src="assets/images/movie-posters/godzilla.jpeg" height="741"
-                     width="500"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="toy story" src="assets/images/movie-posters/toystory.jpeg" height="741" width="500"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="star war" src="assets/images/movie-posters/starwar.jpg" height="1920" width="1280"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="the creator" src="assets/images/movie-posters/thecreater.jpg" height="1920"
-                     width="1280"/>
-            </a>
-        </div>
-        <div class="movie-container">
-            <a href="movie.html" aria-label="View Movie">
-                <img class="poster" alt="nowhere" src="assets/images/movie-posters/nowhere.jpg" height="1920" width="1280"/>
-            </a>
-        </div>
-        <div class="caret-right-2" aria-label="See more movies">
-            <a>
-                >
-            </a>
-        </div>
-    </div>
-</div>
+<div id="result-container"></div>
 
 <div class="back-to-top">
     <a href="#" class="back-to-top-icon">

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron&family=Rajdhani&display=swap"
           rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <script src="js/shopping-cart.js" defer></script>
 </head>
 
 <body aria-label="Square Eyes - Cart">
@@ -21,7 +22,8 @@
     <p class="slogan">Connecting film lovers</p>
     <div id="logo-header">
         <a href="index.html" aria-label="Click to go home">
-            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"
+                 aria-label="logo, click to go home"/>
         </a>
     </div>
     <div class="account-menu">
@@ -31,7 +33,7 @@
         </a>
         <a href="#" id="cart">
             <i class="fa-solid fa-cart-shopping" aria-label="Click to view cart"></i>
-            <span>0 item(s)</span>
+            <span id="cart-amount">Cart</span>
         </a>
         <a href="#" id="wishlist">
             <i class="fa-solid fa-heart" aria-label="Click to view wishlist"></i>
@@ -71,116 +73,28 @@
             </p>
         </div>
     </div>
-    <div class="movies">
-        <div class="movie-container">
-            <div class="movie" aria-label="Movie 1">
-                <div class="image-container">
-                    <img class="image" alt="the other" src="assets/images/movie-posters/makerfilm1.png" width="384"
-                         height="374"/>
-                </div>
-                <div class="title">
-                    <h1>
-                        The Other
-                    </h1>
-                    <p>
-                        2023 Drama/Romance
-                    </p>
-                </div>
-                <div class="text">
-                    <p>
-                        When another woman meets another woman, annoying things happen.
-                    </p>
-                </div>
-                <div class="price">
-                    <p>
-                        69 NOK
-                    </p>
-                </div>
-                <div class="rating">
-                    <p>Rating</p>
-                    <img alt="rating 75%" class="rating-circle" src="assets/images/rating.png" height="56" width="56"/>
-                </div>
-                <div class="button-container">
-                    <button type="button" class="remove">
-                        Remove
-                    </button>
-                </div>
+    <div id="items"></div>
+    <div id="total"></div>
+
+    <div class="price-container-flex">
+        <div id="price-container" aria-label="Price Details">
+            <div class="policy">
+                <a href="#">
+                    View payment and return policy
+                </a>
             </div>
-        </div>
-        <div class="movie-container">
-            <div class="movie" aria-label="Movie 2">
-                <div class="image-container">
-                    <img class="image" alt="the one" src="assets/images/movie-posters/makerfilm2.png" width="400"
-                         height="400"/>
-                </div>
-                <div class="title">
-                    <h1>
-                        The One
-                    </h1>
-                    <p>
-                        2023 Drama/Romance
-                    </p>
-                </div>
-                <div class="text">
-                <p>
-                    When another man meets a woman, annoying things happen.
-                </p>
+            <div class="buttons">
+                <a href="browse.html">
+                    <a href="browse.html" class="btn">
+                        < Back
+                    </a>
+                </a>
+                <a href="payment.html">
+                    <a href="payment.html" class="btn">
+                        Continue
+                    </a>
+                </a>
             </div>
-            <div class="price">
-                <p>
-                    69 NOK
-                </p>
-            </div>
-            <div class="rating">
-                <p>Rating</p>
-                <img alt="rating 75%" class="rating-circle" src="assets/images/rating.png" height="56" width="56"/>
-            </div>
-            <div class="button-container">
-                <button type="button" class="remove">
-                    Remove
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="price-container-flex">
-    <div class="price-container" aria-label="Price Details">
-        <div class="discount">
-            <div class="discount-tag">
-                <label for="discount-code"><i class="fa-solid fa-tag"></i>Discount Code</label>
-                <input type="text" id="discount-code" name="discount-code" placeholder="Your code here" required>
-                <button type="button" class="redeem">
-                    Redeem
-                </button>
-            </div>
-        </div>
-        <div class="total">
-            <p>
-                Total
-            </p>
-            <p>
-                138
-            </p>
-            <p>
-                NOK
-            </p>
-        </div>
-        <div class="policy">
-            <a href="#">
-                View payment and return policy
-            </a>
-        </div>
-        <div class="buttons">
-            <a href="browse.html">
-                <button class="back-btn">
-                    < Back
-                </button>
-            </a>
-            <a href="payment.html">
-                <button class="continue">
-                    Continue
-                </button>
-            </a>
         </div>
     </div>
 </div>
@@ -221,10 +135,10 @@
     </div>
     <div class="logo-footer">
         <a href="index.html" aria-label="Click to go home">
-            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"
+                 aria-label="logo, click to go home"/>
         </a>
     </div>
 </footer>
-</div>
 </body>
 </html>
