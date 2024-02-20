@@ -41,17 +41,4 @@ async function fetchData() {
     }
 }
 
-
-function addToCart(x) {
-    const storedValue = localStorage.getItem(x) === 'true';
-    const changedState = !storedValue
-    localStorage.setItem(x, changedState);
-
-    if (changedState){
-        console.log(`Movie ${x} add to cart`)
-    } else {
-        console.log(`Movie ${x} remove from cart`)
-    }
-}
-
 fetchData();

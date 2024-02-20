@@ -133,6 +133,18 @@ body {
     color: aqua;
 }
 
+#cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cart-amount {
+    position: relative;
+    top: -2px;
+}
+
 #cart:hover i,
 #cart:hover span {
     color: aqua;
