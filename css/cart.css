@@ -1,3 +1,60 @@
+#items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 40px;
+}
+
+.cart-items {
+    display: flex;
+    gap: 8px;
+    width: 70%;
+    background-color: #3C3C3B;
+    border-radius: 16px;
+    box-shadow: 0 5px #121212;
+    margin: 10px;
+    padding: 20px;
+}
+
+.product-detail {
+    width: 100%;
+}
+
+.product-detail p {
+    font-family: "Montserrat", "sans-serif";
+    margin-bottom: 10px;
+}
+
+.price {
+    color: aqua;
+    padding-top: 10px;
+}
+
+#total {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.total-price {
+    font-size: 3rem;
+}
+
+.product-header {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .contents {
     display: flex;
@@ -218,18 +275,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative;
-}
-
-.price-container {
-    display: grid;
-    width: 60%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-    'discount discount'
-    'empty total'
-    'policy buttons';
 }
 
 .discount {
@@ -240,41 +285,6 @@
     align-items: center;
     gap: 16px;
     padding-top: 20px;
-}
-
-.discount-tag {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 16px;
-}
-
-.discount-tag i {
-    position: relative;
-    top: 2px;
-    padding-right: 4px;
-}
-
-#discount-code {
-    height: 30px;
-    width: 150px;
-    border-radius: 24px;
-    padding-left: 8px;
-}
-
-.redeem,
-.back-btn,
-.continue {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    border-radius: 50px;
-    height: 30px;
-    width: 80px;
-    cursor: pointer;
 }
 
 .total {
@@ -293,10 +303,11 @@
 }
 
 .policy {
-    grid-area: policy;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .policy:hover {

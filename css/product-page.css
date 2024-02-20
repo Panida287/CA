@@ -16,6 +16,13 @@ h1 {
     margin: 40px;
 }
 
+h2 {
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1.5rem;
+    color: aqua;
+    padding-top: 20px;
+}
+
 .description-text {
     display: flex;
     width: 400px;
@@ -51,6 +58,6 @@ h1 {
 .button-container {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }

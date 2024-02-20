@@ -16,6 +16,25 @@ root {
     --text-color: white;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    margin: 16px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.btn:hover {
+    border: 2px solid white;
+    box-shadow: 0 0 15px aqua, inset 0 0 15px aqua;
+}
+
 body {
     background: linear-gradient(90deg, rgba(0, 255, 255, 0.19) 0%, rgba(0, 255, 255, 0.00) 14.06%, rgba(0, 255, 255, 0.00) 85.42%, rgba(0, 255, 255, 0.19) 100%), #121212;
 );

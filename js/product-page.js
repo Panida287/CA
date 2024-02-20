@@ -3,6 +3,7 @@ const squareEyesAPI = "https://api.noroff.dev/api/v1/square-eyes";
 const container = document.querySelector('.posters');
 const urlParameter = new URLSearchParams(window.location.search);
 const movieID = urlParameter.get("id");
+const basket = JSON.parse(localStorage.getItem("data")) || [];
 
 async function fetchData() {
     try {
@@ -16,7 +17,7 @@ async function fetchData() {
             movieDetails.innerHTML = `
                 <h1>${selectedMovie.title} (${selectedMovie.released})</h1>
                 <div class="movie-container">
-                    <div class="poster-image">
+                    <div class="poster-image" id=${selectedMovie.id}>
                         <img src="${selectedMovie.image}" width="200px" height="300px">
                     </div>
                     <div class="description-text">
@@ -24,10 +25,14 @@ async function fetchData() {
                         <p>Release year: ${selectedMovie.released}</p>
                         <p>IMDB Rating: ${selectedMovie.rating}</p>
                         <p>Description: ${selectedMovie.description}</p>
+                        <h2>${selectedMovie.price} NOK</h2>
                         <div class="button-container">
-                            <button onclick="addToCart('${selectedMovie.id}')" class="add-to-cart-btn">
+                            <button onclick="addToCart('${selectedMovie.id}')" id="add-or-remove" class="add-to-cart-btn">
                             Add to cart
                             </button>
+                            <a href="browse.html" class="btn">
+                            Back to Browse
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -42,3 +47,23 @@ async function fetchData() {
 }
 
 fetchData();
+
+const addToCart = (id) => {
+    const index = basket.findIndex(item => item.id === id);
+    if (index === -1) {
+        basket.push({
+            id: id,
+            item: 1
+        });
+        document.getElementById("add-or-remove").innerHTML = "Remove";
+        alert("Item added to cart!");
+    } else {
+        basket.splice(index, 1);
+        document.getElementById("add-or-remove").innerHTML = "Add to cart";
+        alert("Item removed from cart!");
+    }
+
+    localStorage.setItem("data", JSON.stringify(basket));
+}
+
+
