@@ -9,6 +9,7 @@ const viewAllButton = document.getElementById("view-all-button");
 const loadingDiv = document.getElementById("loader");
 const resultContainer = document.getElementById("result-container");
 const header = document.getElementById("header");
+
 async function fetchData() {
     try {
         const HTTPResponse = await fetch(squareEyesAPI);
@@ -20,7 +21,7 @@ async function fetchData() {
 }
 
 function displayMovies(movies) {
-    resultContainer.innerHTML = ""; // Clear previous movies
+    resultContainer.innerHTML = "";
 
     movies.forEach(item => {
         const card = createMovieCard(item);
@@ -37,13 +38,16 @@ function createMovieCard(item) {
             <img src="${item.image}" class="card-image">
         </figure>
     `;
+    loadingDiv.style.display = "none";
     return card;
+
 }
 
 dramaButton.addEventListener("click", function() {
     header.innerHTML = "Drama";
     const dramaMovies = moviesArray.filter(movie => movie.genre.toLowerCase().includes("drama"));
     displayMovies(dramaMovies);
+    loadingDiv.style.display = "none";
 
 });
 
@@ -51,15 +55,20 @@ actionButton.addEventListener("click", function() {
     header.innerHTML = "Action";
     const actionMovies = moviesArray.filter(movie => movie.genre.toLowerCase().includes("action"));
     displayMovies(actionMovies);
+    loadingDiv.style.display = "none";
 });
+
 comedyButton.addEventListener("click", function() {
     header.innerHTML = "Comedy";
     const comedyMovies = moviesArray.filter(movie => movie.genre.toLowerCase().includes("comedy"));
     displayMovies(comedyMovies);
+    loadingDiv.style.display = "none";
 });
+
 viewAllButton.addEventListener("click", function() {
     header.innerHTML = "All Movies";
     displayMovies(moviesArray);
+    loadingDiv.style.display = "none";
 });
 
 

@@ -145,21 +145,6 @@
     justify-content: center;
     align-items: center;
     text-wrap: nowrap;
-    padding: 20px;
+    padding: 30px;
 }
 
-.watch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    border-radius: 50px;
-    height: 30px;
-    width: 100px;
-}
-
-.watch:hover {
-    box-shadow: 0 0 15px aqua;
-}

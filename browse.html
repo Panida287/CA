@@ -23,7 +23,8 @@
     <p class="slogan">Connecting film lovers</p>
     <div id="logo-header">
         <a href="index.html" aria-label="Click to go home">
-            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463" aria-label="logo, click to go home"/>
+            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"
+                 aria-label="logo, click to go home"/>
         </a>
     </div>
     <div class="nav">
@@ -65,123 +66,101 @@
     </div>
 </header>
 
-<div class="promo-poster" aria-label="Promo Poster">
-    <img alt="new world movie poster" class="banner" src="assets/images/movie-posters/newworld-poster.png" height="688"
-         width="1440"/>
-</div>
-<div class="promo-container" aria-label="Promo Description">
-    <div class="promo-description">
-        <img alt="new world" id="promo-title" src="assets/images/newworld.png" height="67" width="437"/>
-        <p id="minutes">
-            90 minutes / sci-fi
-        </p>
-        <p id="resolution">
-            4K
-        </p>
-        <p id="newworld-text">
-            After the third extinctions, humankind and robots and exhausted with endless attempts to find a new world
-        </p>
-        <button type="button" id="watch-trailer" aria-label="Watch Trailer">
-            Watch Trailer
-        </button>
-        <button type="button" id="buy" aria-label="Buy for 99kr">
-            Buy for 99kr
-        </button>
-        <button type="button" id="add-to-wishlist" aria-label="Add to wishlist">
-            + Add to Wishlist
-        </button>
-    </div>
-</div>
-
-<div class="browse" aria-label="Browse Options">
-    <div class="browse-by" aria-label="Browse By">
-        <input type="checkbox" id="browse-checkbox"/>
-        <label for="browse-checkbox" id="browse-label" aria-label="Toggle Browse Options">
-            <i class="fa-solid fa-arrow-left">
+<main>
+    <div class="browse" aria-label="Browse Options">
+        <div class="browse-by" aria-label="Browse By">
+            <input type="checkbox" id="browse-checkbox"/>
+            <label for="browse-checkbox" id="browse-label" aria-label="Toggle Browse Options">
+                <i class="fa-solid fa-arrow-left">
             <span>
                 Genre
             </span>
-            </i>
-        </label>
-        <div class="filter-btn-container">
-            <button class="filter-btn" id="action-button">
-                Action
-            </button>
-            <button class="filter-btn" id="drama-button">
-                Drama
-            </button>
-            <button class="filter-btn" id="comedy-button">
-                Comedy
-            </button>
-            <button class="filter-btn" id="view-all-button">
-                View all
-            </button>
+                </i>
+            </label>
+            <div class="filter-btn-container">
+                <button class="filter-btn" id="action-button">
+                    Action
+                </button>
+                <button class="filter-btn" id="drama-button">
+                    Drama
+                </button>
+                <button class="filter-btn" id="comedy-button">
+                    Comedy
+                </button>
+                <button class="filter-btn" id="view-all-button">
+                    View all
+                </button>
+            </div>
+        </div>
+        <div class="search" aria-label="Search">
+            <input type="checkbox" id="search-checkbox"/>
+            <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search" onkeyup="search()">
+                Search <i id="search-icon" class="fas fa-search"></i>
+            </label>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
+                <label for="search-bar"></label>
+            </div>
         </div>
     </div>
-    <div class="search" aria-label="Search">
-        <input type="checkbox" id="search-checkbox"/>
-        <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search" onkeyup="search()">
-            Search <i id="search-icon" class="fas fa-search"></i>
-        </label>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
-            <label for="search-bar"></label>
+    <div id="header">
+        All Movies
+    </div>
+    <div id="result-container">
+        <div id="loader">
+            <h3>...loading</h3>
         </div>
     </div>
-</div>
-<div id="header">
-    All Movies
-</div>
-<div id="result-container"></div>
 
-<div class="back-to-top">
-    <a href="#" class="back-to-top-icon">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-    <a id="back-to-top-text" href="#">BACK TO TOP</a>
-</div>
 
-<footer class="footer" aria-label="Footer">
-    <div class="first-row-links">
-        <a href="#">
-            About us
+    <div class="back-to-top">
+        <a href="#" class="back-to-top-icon">
+            <i class="fa-solid fa-arrow-up"></i>
         </a>
-        <a href="#">
-            Contact us
-        </a>
-        <a href="#">
-            Copyright
-        </a>
-        <a href="#">
-            Help center
-        </a>
-        <a href="#">
-            Privacy policy
-        </a>
+        <a id="back-to-top-text" href="#">BACK TO TOP</a>
     </div>
-    <div class="second-row-links">
-        <a href="#">
-            Terms of service
-        </a>
-        <a href="#">
-            Advertise with us
-        </a>
-        <a href="#">
-            Feedback and suggestions
-        </a>
-        <a href="#">
-            Partnerships
-        </a>
-        <a href="#">
-            Copyright 2023 Square Eyes
-        </a>
-    </div>
-    <div class="logo-footer" aria-label="Click to go home">
-        <a href="index.html">
-            <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
-        </a>
-    </div>
-</footer>
 
+    <footer class="footer" aria-label="Footer">
+        <div class="first-row-links">
+            <a href="#">
+                About us
+            </a>
+            <a href="#">
+                Contact us
+            </a>
+            <a href="#">
+                Copyright
+            </a>
+            <a href="#">
+                Help center
+            </a>
+            <a href="#">
+                Privacy policy
+            </a>
+        </div>
+        <div class="second-row-links">
+            <a href="#">
+                Terms of service
+            </a>
+            <a href="#">
+                Advertise with us
+            </a>
+            <a href="#">
+                Feedback and suggestions
+            </a>
+            <a href="#">
+                Partnerships
+            </a>
+            <a href="#">
+                Copyright 2023 Square Eyes
+            </a>
+        </div>
+        <div class="logo-footer" aria-label="Click to go home">
+            <a href="index.html">
+                <img class="logo" alt="logo" src="assets/images/logo.png" height="311" width="463"/>
+            </a>
+        </div>
+    </footer>
+</main>
 </body>
 </html>
