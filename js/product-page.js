@@ -34,16 +34,24 @@ async function fetchData() {
                             Back to Browse
                             </a>
                         </div>
+                        <div class="go-to-cart-btn">
+                            <button onclick="goToCart()" class="btn go-to-cart">
+                                Go to cart
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
             container.appendChild(movieDetails);
         } else {
-            console.log("Failure");
         }
     } catch (error) {
         console.error('Error fetching data:', error);
     }
+}
+
+function goToCart() {
+    window.location.href = "cart.html";
 }
 
 fetchData();
