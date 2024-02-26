@@ -8,7 +8,6 @@ fetch(squareEyesAPI)
     })
     .then(function(apiResult) {
         const apiArray = apiResult;
-        console.log(apiArray);
         apiArray.slice(0, 6).forEach(item => {
             const card = document.createElement("a");
             card.classList.add("card");
