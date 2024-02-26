@@ -61,3 +61,9 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
 }
+
+.go-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

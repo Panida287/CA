@@ -68,35 +68,21 @@
 
 <main>
     <div class="browse" aria-label="Browse Options">
-        <div class="browse-by" aria-label="Browse By">
-            <input type="checkbox" id="browse-checkbox"/>
-            <label for="browse-checkbox" id="browse-label" aria-label="Toggle Browse Options">
-                <i class="fa-solid fa-arrow-left">
-            <span>
-                Genre
-            </span>
-                </i>
-            </label>
-            <div class="filter-btn-container">
-                <button class="filter-btn" id="action-button">
-                    Action
-                </button>
-                <button class="filter-btn" id="drama-button">
-                    Drama
-                </button>
-                <button class="filter-btn" id="comedy-button">
-                    Comedy
-                </button>
-                <button class="filter-btn" id="view-all-button">
-                    View all
-                </button>
-            </div>
+        <div class="filter-btn-container">
+            <button class="btn" id="action-button">
+                Action
+            </button>
+            <button class="btn" id="drama-button">
+                Drama
+            </button>
+            <button class="btn" id="comedy-button">
+                Comedy
+            </button>
+            <button class="btn" id="view-all-button">
+                View all
+            </button>
         </div>
         <div class="search" aria-label="Search">
-            <input type="checkbox" id="search-checkbox"/>
-            <label for="search-checkbox" id="search-checkbox-label" aria-label="Toggle Search" onkeyup="search()">
-                Search <i id="search-icon" class="fas fa-search"></i>
-            </label>
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search..." aria-label="Type to search"/>
                 <label for="search-bar"></label>
