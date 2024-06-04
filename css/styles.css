@@ -218,6 +218,8 @@ body {
     height: 200px;
     background-color: #2D2D2C;
     margin-top: 40px;
+    position: fixed;
+    bottom: 0;
 }
 
 .first-row-links {
