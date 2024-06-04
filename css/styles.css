@@ -219,7 +219,7 @@ body {
     height: 200px;
     background-color: #2D2D2C;
     margin-top: 40px;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
