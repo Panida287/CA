@@ -1,7 +1,5 @@
 const squareEyesAPI = "https://api.noroff.dev/api/v1/square-eyes"
 let moviesArray = [];
-const container1 = document.querySelector(".posters-grid-1");
-const container2 = document.querySelector(".posters-grid-2");
 const dramaButton = document.getElementById("drama-button");
 const actionButton = document.getElementById("action-button");
 const comedyButton = document.getElementById("comedy-button");
