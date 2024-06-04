@@ -20,3 +20,17 @@ fetch(squareEyesAPI)
             container.appendChild(card);
         })
     })
+
+// Get the buttons
+const backToTopBtns = document.querySelectorAll('.back-to-top button');
+
+// Add click event listener to each button
+backToTopBtns.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior if it's an anchor tag
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling
+        });
+    });
+});
